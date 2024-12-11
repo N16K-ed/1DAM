@@ -1,0 +1,13 @@
+INICIO
+	ENTRADAS{
+		x número
+		y número
+		}
+	SALIDAS{
+		max número
+		}
+	CUERPO{
+		Si x menor o igual que y entonces min = x
+		Si y menor que x entonces min = y
+	}
+FIN

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<store name="The Best Store" location="Madrid">
+ <product>
+ <name>Smartphone</name>
+ <description>A <brand>Samsung</brand> with a high-resolution<feature>OLED</feature> screen.</description>
+ <price> 699.99</price>
+ <stock>Available</stock>
+ </product>
+ <product>
+ <name>Sports T-shirt</name>
+ <description>A <brand>Nike</brand> t-shirt made with<feature>breathable</feature> material.</description>
+ <price>29.99</price>
+ <stock>Available</stock>
+ </product>
+ <product>
+ <name>Blender</name>
+ <description>A <brand>Philips</brand> with <feature>500 watts</feature> of power.</description>
+ <price>49.99</price>
+ <stock>Available</stock>
+ </product>
+</store>

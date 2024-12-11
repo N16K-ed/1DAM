@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facturas>
+  <factura id="100000">
+    <Cliente>44783023G</Cliente>
+    <articulo>
+      <Id>4736&#60;6265</Id>
+      <precio>1560</precio>
+    </articulo>
+    <articulo>
+      <_id>DV4-2012</_id>
+      <precio    >1340</precio    >
+    </articulo>
+  </factura>
+  <factura id="100001">
+    <cliente>33893983H</cliente>
+    <arti_culo>
+      <id>4732Z-4059</id>
+      <precio1>1320</precio1>
+    </arti_culo>
+    <arti_culo>
+      <i.d>4732Z-4059</i.d>
+      <precio>1320</precio>
+    </arti_culo>
+  </factura>
+  <factura id="100002">
+    <cli_ente>22390349N</cli_ente>
+    <articulo10>
+      <id>4732Z-4583</id>
+      <precio>1150</precio>
+    </articulo10>
+    <articulo>
+      <_id>4736-6265</_id>
+      <PRecio>1560</PRecio>
+    </articulo>
+  </factura>
+  <factura id="100003">
+    <cliente>55234983E</cliente>
+    <articulo>
+      <id12>L515-SP3014</id12>
+      <prec_io>1345</prec_io>
+    </articulo>
+	</factura>
+  <factura id="100004">
+    <cliente></cliente>
+    <articulo>
+      <ID id="1234">L515-SP4011</ID>
+      <precio precio="1210"/>
+    </articulo>
+  </factura>
+  <factura id="">
+    <clientE>55234983E</clientE>
+    <articulo>
+      <id>T135&amp;2909</id>
+      <precio att="12">1350></precio>
+    </articulo>
+    <articulo>
+      <id>DV4-2012</id>
+      <precio>1340</precio>
+  </articulo>
+  </factura>
+</facturas>

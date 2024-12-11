@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="store">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" maxOccurs="100">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="description">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="brand" type="xs:string"/>
+                                        <xs:element name="feature" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="price" type="xs:double"/>
+                            <xs:element name="stock">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Available"/>
+                                        <xs:enumeration value="NotAvailable"/>
+                                        <xs:enumeration value="Overbooked"/>
+                                        restriccion noespacios
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>                                                 
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="name"/>
+            <xs:attribute name="location" fixed="Madrid"/>                          
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

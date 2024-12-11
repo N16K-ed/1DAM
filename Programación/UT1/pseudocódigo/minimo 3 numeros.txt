@@ -1,0 +1,15 @@
+INICIO
+	ENTRADAS{
+		X número
+		Y número
+		Z número
+		}
+	SALIDAS{
+		mínimo número
+		}
+	CUERPO{
+		Si (X < Y) y (X < Z) entonces mínimo = X
+		Si (Y < X) y (Y < Z) entonces mínimo = Y
+		Si (Z < X) y (Z < Y) entonces mínimo = Z
+		}
+FIN

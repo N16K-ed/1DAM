@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Teams>
+<team1>
+<name>FC Barcelona</name>
+<city>Barcelona</city>
+<coach/>
+<player1 position="Goalkeeper">
+<name>Ter Stegen</name>
+<nationality>Germany</nationality>
+</player1>
+<player2 position="Forwarder">
+<name>Lamine Yamal</name>
+<nationality>Spain</nationality>
+</player2>
+</team1>
+<team2>
+<name>Real Madrid CF</name>
+<city>Madrid</city>
+<coach/>
+<player1 position="Midfielder">
+<name>Jude Bellingham</name>
+<nationality>United Kingdom</nationality>
+</player1>
+<player2 position="Forwarder">
+<name>Kylian Mbappé</name>
+<nationality>France</nationality>
+</player2>
+</team2>
+</Teams>

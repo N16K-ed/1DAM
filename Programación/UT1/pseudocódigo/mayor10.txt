@@ -1,0 +1,18 @@
+INICIO
+	ENTRADAS{
+		a número
+		b número
+		c número
+		d número
+		}
+	SALIDAS{
+		resultado booleano
+		}
+	CUERPOS{
+		si a es igual o mayor que 10 entonces resultado = verdadero
+		si b es igual o mayor que 10 entonces resultado = verdadero
+		si c es igual o mayor que 10 entonces resultado = verdadero
+		si d es igual o mayor que 10 entonces resultado = verdadero
+		si a, b, c y d son menores que 10 entonces resultado = falso
+		}
+FIN

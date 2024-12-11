@@ -1,0 +1,12 @@
+INICIO
+	ENTRADAS{
+		x número
+		y número
+		}
+	SALIDAS{
+		max
+		}
+	CUERPO
+		si x es mayor o igual que y entonces max = x
+		si y es mayor que x entonces max = y
+FIN

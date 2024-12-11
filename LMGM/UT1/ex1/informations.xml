@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Friends>
+<friend1 email="xmorras@gmail.com">
+<name>Xabi</name>
+<lastname>Morrás</lastname>
+<mobile>666777888</mobile>
+</friend1>
+<friend2 email="pr@gmail.com">
+<name>Pablo</name>
+<lastname>Rodriguez</lastname>
+<mobile>667788990</mobile>
+</friend2>
+<friend3 email="jmi@gmail.com">
+<name>Jose</name>
+<lastname>Mi</lastname>
+<mobile>678901234</mobile>
+</friend3>
+</Friends>

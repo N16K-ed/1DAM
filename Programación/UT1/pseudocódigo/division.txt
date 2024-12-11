@@ -1,0 +1,13 @@
+INICIO
+	ENTRADA{
+		x número
+		y número
+		}
+	SALIDA{
+		división número
+		}
+	CUERPO{
+		si y es distinto de 0 entonces div = x/y
+		si y = 0 entonces division = 0
+		}
+FIN

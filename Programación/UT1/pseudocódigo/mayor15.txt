@@ -1,0 +1,15 @@
+INICIO
+	ENTRADAS{
+		a número
+		b número
+		c número
+		d número
+		}
+	SALIDAS{
+		resultado booleano
+		}
+	CUERPOS{
+		si a + b + c + d es mayor o igual que 15 entonces resultado = verdadero
+		si a + b + c + d es menor que 15 entonces resultado = falso
+		}
+FIN

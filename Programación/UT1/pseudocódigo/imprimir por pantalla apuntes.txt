@@ -1,0 +1,14 @@
+INICIO
+	ENTRADAS{
+		x número
+		}
+	SALIDAS{
+	}
+	CUERPO{
+		sacar/mostrar/imprimir por pantalla x
+		}
+FIN
+
+
+
+"Imprime por pantalla el valor (en este caso un número) de x"

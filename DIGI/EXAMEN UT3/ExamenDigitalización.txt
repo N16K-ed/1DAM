@@ -1,0 +1,25 @@
+1.
+Una tecnología inteligente es capaz de conectarse a internet y hacer uso de este para facilitar su utilización o automatizar su funcionamiento.
+2.
+Hace uso del IoT (Internet de las cosas) para monitorizar la producción, ahorrar en el coste energético y automatizar procesos. También utiliza gemelos digitales para probar los productos antes de empezar a producirlos y poder hacer cambios, o para el mantenimiento de la maquinaria de una fábrica.
+3.
+Permite controlar mejor el coste de energía, lo que lo hace más sostenible. Además con todas las cosas automatizadas y conectadas a internet, la casa es mucho más accesible y cómoda de utilizar (desde cualquier punto de la casa).
+4.
+Las ciudades inteligentes hacen uso de sistemas conectados a Internet (IoT y tecnologías inteligentes como monitoreo digital a tiempo real del tráfico y aplicaciones para poder consultar cuando llega el transporte público o para gestionar las plazas de estacionamiento entre otros.
+5.
+El Big Data permite a las empresas hacer un análisis masivo de las cosas que hacen e interesan a todos sus clientes para poder hacerles recomendaciones personalizadas y adaptar su servicio a cada cliente, lo que se llama análisis predictivo. Al ser estos muchísimos datos que el humano por si solo no podría manejar, muchas empresas hacen uso de inteligencias artificiales para estos análisis de Big Data.
+6.
+Al estar todo conectado a Internet, todas las cosas son susceptibles a robos de información, hackeos, y utilización abusiva en contra de las personas. 
+7.
+Se pueden utilizar para hacer un reconocimiento a tiempo real del área de trabajo, identificar orígenes de problemas que puedan ocurrir en la fábrica al estar todo grabado y ayudar a solucionarlos (como incendios) o utilizarse como medios de transporte.
+8.
+Reconocimiento facial (Útil a la hora de reconocer a los involucrados en un accidente o crimen), carreteras inteligentes que permitan modificar la circulación en tiempo real de manera eficiente sin necesidad de obras ni señales.
+9.
+La mayoría de edificios inteligentes cuentan con paneles solares y/o sistemas de iluminación eficiente y/o automática lo que hace ahorrar en costes energéticos y ser más sostenibles.
+10.
+Hacer leyes que regulen y protejan la privacidad de los ciudadanos ante el uso de tecnologías inteligentes, y concienciar e informar a los ciudadanos de como se pueden y se deben utilizar estas tecnologías.
+
+
+
+
+FRAN SAN NICOLÁS

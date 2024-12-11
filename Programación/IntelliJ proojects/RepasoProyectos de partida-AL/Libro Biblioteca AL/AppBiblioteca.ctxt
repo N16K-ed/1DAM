@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=AppBiblioteca
+comment0.text=\r\n\ \r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ \ Dentro\ del\ main()\:\r\n\ \ -\ define\ y\ crea\ el\ teclado\ \r\n\ \ -\ pide\ por\ teclado\ los\ datos\ de\ dos\ libros\ \ \ \ \ \ \ \ \r\n\ \ -\ crea\ un\ objeto\ miBiblioteca\ usando\ el\ constructor\ 1\r\n\ \ -\ muestra\ la\ informaci\u00F3n\ de\ miBiblioteca\r\n\ \ \r\n\ \ -\ presta\ el\ libro\ 1\r\n\ \ -\ muestra\ ahora\ cu\u00E1ntos\ libros\ disponibles\ hay\ en\ miBiblioteca\r\n\ \ \r\n\ \ -\ pide\ ahora\ por\ teclado\ los\ datos\ de\ otros\ dos\ libros\r\n\ \ -\ crea\ ahora\ un\ objeto\ tuBiblioteca\ usando\ el\ 2\u00BA\ constructor\ \ \ \ \ \ \r\n\ \ -\ muestra\ tuBiblioteca\r\n\ \ \r\n\ \ -\ pide\ a\ tuBiblioteca\ un\ nuevo\ libro\ (llamando\ al\ m\u00E9todo\ nuevoLibro()\r\n\ \ -\ muestra\ la\ informaci\u00F3n\ de\ este\ libro\r\n\ \ \r\n\ \ -\ escribe\ el\ nombre\ del\ libro\ con\ m\u00E1s\ p\u00E1ginas\ en\ tuBiblioteca\r\n\ \ \r\n\ \ \r\n\ \ -\ Sal\ a\ l\u00EDnea\ de\ comandos\ y\ ejecuta\ el\ programa\r\n
+numComments=2

@@ -1,0 +1,21 @@
+INICIO
+	ENTRADAS{
+		x número
+		}
+	SALIDAS{
+	}
+	CUERPO{
+		imprimir por pantalla x
+		imprimir por pantalla x*2
+		imprimir por pantalla x*3
+		imprimir por pantalla x*4
+		imprimir por pantalla x*5
+		imprimir por pantalla x*6
+		imprimir por pantalla x*7
+		imprimir por pantalla x*8
+		imprimir por pantalla x*9
+		imprimir por pantalla x*10
+		}
+FIN
+		
+	

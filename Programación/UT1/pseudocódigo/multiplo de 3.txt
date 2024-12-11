@@ -1,0 +1,12 @@
+INICIO
+	ENTRADAS{
+		X número;
+		}
+	SALIDAS{
+		respuesta booleano (VERDADERO/FALSO)
+		}
+	CUERPO{
+		Si resto de X/3 = 0 (X%3 = 0) entonces respuesta = VERDADERO/FALSO
+		Si resto de X/3 != 0 entonces respuesta = FALSO
+		{
+FIN

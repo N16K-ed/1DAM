@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=titulo1\ paginas1\ titulo2\ paginas2
+comment0.target=Biblioteca(java.lang.String,\ int,\ java.lang.String,\ int)
+comment0.text=\r\n\ Constructor\ 1\ .\ Crea\ los\ libros\ \ a\ partir\ de\ los\ valores\ de\ los\ par\u00E1metros\r\n
+comment1.params=libro1\ libro2
+comment1.target=Biblioteca(Libro,\ Libro)
+comment1.text=\r\n\ Constructor\ 2\ .\ Crea\ los\ libros\ \ a\ partir\ de\ los\ par\u00E1metros\r\n
+comment2.params=
+comment2.target=void\ prestarLibro1()
+comment2.text=\r\n\ Se\ presta\ \ el\ libro1\ si\ est\u00E1\ \ disponible\ \r\n
+comment3.params=
+comment3.target=void\ prestarLibro2()
+comment3.text=\r\n\ Se\ presta\ \ el\ libro2\ si\ est\u00E1\ \ disponible\ \r\n
+comment4.params=
+comment4.target=int\ cuantosDisponibles()
+comment4.text=\r\n\ \ Devuelve\ la\ cantidad\ de\ libros\ disponibles\ en\ la\ biblioteca\r\n\r\n
+comment5.params=
+comment5.target=java.lang.String\ masPaginas()
+comment5.text=\r\n\ \ Devuelve\ el\ t\u00EDtulo\ del\ libro\ con\ m\u00E1s\ p\u00E1ginas\r\n\r\n
+comment6.params=
+comment6.target=Libro\ nuevoLibro()
+comment6.text=\r\n\ crea\ y\ devuelve\ un\ nuevo\ libro\ con\ el\ t\u00EDtulo\ de\ libro1\ y\ las\ p\u00E1ginas\ de\ \ libro2\r\n
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment7.text=\r\n\ Representaci\u00F3n\ textual\ de\ la\ biblioteca\r\n
+numComments=8

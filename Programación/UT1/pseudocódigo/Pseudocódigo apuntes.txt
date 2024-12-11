@@ -1,0 +1,14 @@
+PSEUDO CODIGO "suma de dos números"
+
+INICIO
+	ENTRADAS{
+		X número
+		Y número
+		}
+	SALIDAS{
+		suma
+		}
+	CUERPO{
+	suma X + Y
+	}
+FIN

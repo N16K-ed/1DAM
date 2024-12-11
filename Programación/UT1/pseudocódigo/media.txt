@@ -1,0 +1,13 @@
+INICIO
+	ENTRADAS{
+		x número
+		y número
+		z número
+		}
+	SALIDAS{
+		media número
+		}
+	CUERPO{
+		media = (x + y + z)/3
+		}
+FIN

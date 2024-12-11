@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebList>
+<page>
+<name>Abrirllave</name>
+<description>Tutoriales de informática.</description>
+<URL>http://www.abirillave.com</URL>
+</page>
+<page>
+<name>Wikipedia</name>
+<description>La enciclopedia libre.</description>
+<URL>http://www.wikipedia.org</URL>
+</page>
+<page>
+<name>W3C</name>
+<description>World Wide Web Consortium.</description>
+<URL>http://www.w3.org</URL>
+</page>
+</WebList>

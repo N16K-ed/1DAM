@@ -1,0 +1,44 @@
+#BlueJ class context
+comment0.params=
+comment0.target=RepasoBucles()
+comment0.text=\r\n\ \r\n
+comment1.params=
+comment1.target=void\ impares()
+comment1.text=\r\n\ \ Escribe\ los\ impares\ entre\ 1\ y\ 100\ (con\ un\ for)\r\n\ \ (con\ for)\ -\ escribe\ en\ cada\ l\u00EDnea\ 8\ n\u00FAmeros\ formateados\ a\ 4\ posiciones\r\n\ \r\n
+comment10.params=
+comment10.target=void\ generarSerieDos()
+comment10.text=\r\n\ \ genera\ y\ escribe\ los\ 20\ primeros\ t\u00E9rminos\ de\ la\ serie\ indicada\r\n\ \ Cada\ t\u00E9rmino\ es\ el\ cuadrado\ de\ la\ posici\u00F3n\ que\ ocupa.\r\n\ \ Por\ ejemplo,\ el\ t\u00E9rmino\ 5\u00BA\ es\ 25\ \ \ (\ 5\ *\ 5),\ el\ \r\n\ \ t\u00E9rmino\ 7\u00BA\ \ es\ 49\ (7\ *\ 7).\r\n\ \ \ \ \ \ 1\ \ \ \ \ \ 4\ \ \ \ \ \ \ 9\ \ \ \ \ \ 16\ \ \ \ \ \ 25\ \ \ \ \ \ \ 36\ \ \ \ \ \ \ 49\ \ \ \ \ \ 64\ \ \ \r\n\ \ \ \ \ \ 81\ \ \ \ 100\ \ \ 121\ \ \ \u2026..............\r\n\ \ \ \ \ \ En\ cada\ fila\ escribe\ 8\ t\u00E9rminos.\r\n\r\n
+comment11.params=filas
+comment11.target=void\ escribirSerie(int)
+comment11.text=\r\n\ \ \ Muestra\ en\ pantalla\ la\ siguiente\ serie\ para\ el\ n\u00BA\ \r\n\ \ \ de\ filas\ que\ indica\ el\ par\u00E1metro\r\n\ \ \ 1\r\n\ \ \ 2\ \ \ \ \ \ \ 4\r\n\ \ \ 3\ \ \ \ \ \ \ 6\ \ \ \ \ \ \ 9\r\n\ \ \ 4\ \ \ \ \ \ \ 8\ \ \ \ \ \ \ 12\ \ \ \ \ \ 16\r\n\ \ \ 5\ \ \ \ \ \ \ 10\ \ \ \ \ \ 15\ \ \ \ \ \ 20\ \ \ \ \ \ 25\r\n\ \ \ \ ........................................\ \r\n\ \ \ \ ........................................\r\n\r\n
+comment12.params=n
+comment12.target=void\ mostrarTrianguloNumeros(int)
+comment12.text=\r\n\ \ Escribe\ la\ siguiente\ figura\ para\ el\ n\u00BA\ de\ filas\ indicado\ como\ par\u00E1metro\r\n\ \ Cada\ n\u00BA\ formateado\ a\ 3\ posiciones\r\n\ \ Para\ n\ \=\ 8\ la\ figura\ es\r\n\ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 3\ \ 3\ \ 3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 5\ \ 5\ \ 5\ \ 5\ \ 5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 7\ \ 7\ \ 7\ \ 7\ \ 7\ \ 7\ \ 7\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ 9\ \ 9\ \ 9\ \ 9\ \ 9\ \ 9\ \ 9\ \ 9\ \ 9\ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ 11\ 11\ 11\ 11\ 11\ 11\ 11\ 11\ 11\ 11\ 11\ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ 13\ 13\ 13\ 13\ 13\ 13\ 13\ 13\ 13\ 13\ 13\ 13\ 13\ \ \ \ \ \ \r\n\ \ \ \ 15\ 15\ 15\ 15\ 15\ 15\ 15\ 15\ 15\ 15\ 15\ 15\ 15\ 15\ 15\ \ \ \r\n\r\n\r\n\ \ Haz\ uso\ del\ m\u00E9todo\ escribirEspacios()\r\n
+comment13.params=n
+comment13.target=void\ escribirEspacios(int)
+comment13.text=\r\n\ escribe\ n\ espacios\ en\ la\ misma\ l\u00EDnea\r\n\ (con\ for)\ -\ Un\ espacio\ en\ 3\ posiciones\r\n
+comment2.params=n
+comment2.target=void\ multiplos(int)
+comment2.text=\r\n\ \ Escribe\ los\ 10\ primeros\ m\u00FAltiplos\ de\ n\r\n\ \ (con\ for)\ -\ \ \r\n\ \r\n
+comment3.params=a\ b
+comment3.target=int\ producto(int,\ int)
+comment3.text=\r\n\ \ Calcula\ y\ devuelve\ el\ producto\ de\ a\ y\ b\ mediante\ sumas\r\n\ \ Con\ while\r\n\r\n
+comment4.params=a\ b
+comment4.target=void\ dividirRestando(int,\ int)
+comment4.text=\r\n\ \ \ calcula\ y\ \ visualiza\ \ en\ pantalla\ el\ cociente\ \r\n\ \ \ entero\ y\ el\ resto\ de\ dividir\ a\ entre\ b.\ \ Se\ asume\ que\ a\ y\ b\ son\ ambos\ >\ 0\ y\ a\ >\ b.\r\n\ \ \ Si\ a\ \=\ 15\ \ \ y\ \ \ b\ \=\ 2\ entonces\ cociente\ \=\ \ 7\ \ y\ resto\ \=\ 1,\ \ se\ calcula\ mediante\ restas\ \r\n\ \ \ sucesivas\r\n\r\n
+comment5.params=
+comment5.target=void\ mediaAleatorios()
+comment5.text=\r\n\ \ Genera\ aleatorios\ (con\ Math.random())\ entre\ 10\ y\ 50\ (inclusive)\r\n\ \ Calcula\ y\ escribe\ la\ media\ de\ todos\ ellos\ formateada\ a\ 2\ decimales\r\n\ \ El\ proceso\ termina\ cuando\ sale\ el\ 50\r\n\ \ \r\n\ \ Con\ while\r\n\r\n
+comment6.params=n
+comment6.target=boolean\ esPerfecto(int)
+comment6.text=\r\n\ \ Detecta\ si\ un\ n\u00BA\ es\ o\ no\ perfecto\r\n\ \ Un\ n\u00BA\ es\ perfecto\ si\ la\ suma\ de\ sus\ divisores\ excepto\ \u00E9l\ mismo\ es\ igual\ al\ propio\ n\u00BA\r\n\ \ Con\ for\r\n\ \ \r\n\ \ Ejemplo\ -\ el\ 6\ es\ perfecto\ (1\ +\ 2\ +\ 3)\r\n\ \ \ \ \ \ \ \ \ \ 496\ es\ perfecto\ (\ 1\ +\ 2\ +\ 4\ +\ 8\ +\ 16\ +\ 31\ +\ 62\ +\ 124\ +\ 248)\r\n
+comment7.params=n
+comment7.target=boolean\ esPrimo(int)
+comment7.text=\r\n\ \ Detecta\ si\ n\ es\ un\ n\u00BA\ primo\r\n\ \ Hazlo\ con\ un\ for.\ En\ cuanto\ detectes\ que\ el\ n\u00BA\ no\ es\ primo\ sal\ del\ bucle\ con\ un\ return\r\n\ \ EL\ 1\ no\ es\ un\ n\u00BA\ primo\r\n
+comment8.params=n
+comment8.target=void\ metodo04(int)
+comment8.text=\r\n\ Escribe\ los\ n\ primeros\ n\u00FAmeros\ primos\ a\ partir\ de\ 2\r\n\ Usa\ el\ m\u00E9todo\ anterior\ esPrimo()\r\n\ \r\n\ Si\ n\ \=\ 7\ entonces\ \ 2\ \ \ 3\ \ \ 5\ \ \ 7\ \ \ 11\ \ \ 13\ \ \ 17\r\n\ \r\n\ \ Con\ while\r\n
+comment9.params=
+comment9.target=void\ generarSerieUno()
+comment9.text=\r\n\ \ \ genera\ y\ escribe\ en\ pantalla\ los\ 15\ primeros\ t\u00E9rminos\ de\ \r\n\ \ \ la\ serie,\r\n\ \ \ 1\ \ \ \ \ 2\ \ \ \ \ 4\ \ \ \ 7\ \ \ \ 11\ \ \ \ 16\ \ \ \ 22\ \ \ \ \ 29\ \ \ .......\r\n\r\n
+numComments=14

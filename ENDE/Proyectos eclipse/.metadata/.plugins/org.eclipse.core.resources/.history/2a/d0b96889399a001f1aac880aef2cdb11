@@ -1,0 +1,273 @@
+package Interfaz;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.GridLayout;
+import java.awt.GridBagLayout;
+import javax.swing.JButton;
+import java.awt.GridBagConstraints;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Insets;
+import javax.swing.JToggleButton;
+import javax.swing.JLabel;
+import java.awt.Color;
+import javax.swing.SwingConstants;
+import javax.swing.JTextArea;
+
+public class frameInterfaz extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					frameInterfaz frame = new frameInterfaz();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	String MostrarPorPantalla = "Ninguna fruta seleccionada.";
+	public frameInterfaz() {
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		GridBagLayout gbl_contentPane = new GridBagLayout();
+		gbl_contentPane.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0};
+		gbl_contentPane.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		gbl_contentPane.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
+		gbl_contentPane.rowWeights = new double[]{1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		contentPane.setLayout(gbl_contentPane);
+		
+		JButton btnPlatano = new JButton("Platano");
+		btnPlatano.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		
+		JLabel lblNewLabel = new JLabel("ELIGE EL TIPO DE FRUTA QUE DESEAS");
+		lblNewLabel.setVerticalAlignment(SwingConstants.BOTTOM);
+		lblNewLabel.setBackground(new Color(64, 128, 128));
+		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+		gbc_lblNewLabel.gridwidth = 3;
+		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
+		gbc_lblNewLabel.gridx = 1;
+		gbc_lblNewLabel.gridy = 0;
+		contentPane.add(lblNewLabel, gbc_lblNewLabel);
+		
+		JTextArea precioFruta = new JTextArea();
+		precioFruta.setText(MostrarPorPantalla);
+		GridBagConstraints gbc_precioFruta = new GridBagConstraints();
+		gbc_precioFruta.gridwidth = 2;
+		gbc_precioFruta.insets = new Insets(0, 0, 5, 5);
+		gbc_precioFruta.fill = GridBagConstraints.BOTH;
+		gbc_precioFruta.gridx = 4;
+		gbc_precioFruta.gridy = 0;
+		contentPane.add(precioFruta, gbc_precioFruta);
+		GridBagConstraints gbc_btnPlatano = new GridBagConstraints();
+		gbc_btnPlatano.insets = new Insets(0, 0, 5, 5);
+		gbc_btnPlatano.gridx = 1;
+		gbc_btnPlatano.gridy = 2;
+		contentPane.add(btnPlatano, gbc_btnPlatano);
+		
+		JButton btnManzana = new JButton("Manzana");
+		btnManzana.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Manzana";
+			}
+		});
+		GridBagConstraints gbc_btnManzana = new GridBagConstraints();
+		gbc_btnManzana.insets = new Insets(0, 0, 5, 5);
+		gbc_btnManzana.gridx = 2;
+		gbc_btnManzana.gridy = 2;
+		contentPane.add(btnManzana, gbc_btnManzana);
+		
+		JButton btnMelon = new JButton("Melón");
+		btnMelon.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Melón";
+			}
+		});
+		GridBagConstraints gbc_btnMelon = new GridBagConstraints();
+		gbc_btnMelon.insets = new Insets(0, 0, 5, 5);
+		gbc_btnMelon.gridx = 4;
+		gbc_btnMelon.gridy = 2;
+		contentPane.add(btnMelon, gbc_btnMelon);
+		
+		JButton btnCoco = new JButton("Coco");
+		btnCoco.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Coco";
+			}
+		});
+		GridBagConstraints gbc_btnCoco = new GridBagConstraints();
+		gbc_btnCoco.insets = new Insets(0, 0, 5, 0);
+		gbc_btnCoco.gridx = 5;
+		gbc_btnCoco.gridy = 2;
+		contentPane.add(btnCoco, gbc_btnCoco);
+		
+		JButton btnUva = new JButton("Uva");
+		btnUva.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Uva";
+			}
+		});
+		GridBagConstraints gbc_btnUva = new GridBagConstraints();
+		gbc_btnUva.insets = new Insets(0, 0, 5, 5);
+		gbc_btnUva.gridx = 1;
+		gbc_btnUva.gridy = 4;
+		contentPane.add(btnUva, gbc_btnUva);
+		
+		JButton btnMelocotón = new JButton("Melocotón");
+		btnMelocotón.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Melocotón";
+			}
+		});
+		GridBagConstraints gbc_btnMelocotón = new GridBagConstraints();
+		gbc_btnMelocotón.insets = new Insets(0, 0, 5, 5);
+		gbc_btnMelocotón.gridx = 2;
+		gbc_btnMelocotón.gridy = 4;
+		contentPane.add(btnMelocotón, gbc_btnMelocotón);
+		
+		JButton btnKiwi = new JButton("Kiwi");
+		btnKiwi.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Kiwi";
+			}
+		});
+		GridBagConstraints gbc_btnKiwi = new GridBagConstraints();
+		gbc_btnKiwi.insets = new Insets(0, 0, 5, 5);
+		gbc_btnKiwi.gridx = 4;
+		gbc_btnKiwi.gridy = 4;
+		contentPane.add(btnKiwi, gbc_btnKiwi);
+		
+		JButton btnPera = new JButton("Pera");
+		btnPera.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Pera";
+			}
+		});
+		GridBagConstraints gbc_btnPera = new GridBagConstraints();
+		gbc_btnPera.insets = new Insets(0, 0, 5, 0);
+		gbc_btnPera.gridx = 5;
+		gbc_btnPera.gridy = 4;
+		contentPane.add(btnPera, gbc_btnPera);
+		
+		JButton btnSandía = new JButton("Sandía");
+		btnSandía.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Sandía";
+			}
+		});
+		GridBagConstraints gbc_btnSandía = new GridBagConstraints();
+		gbc_btnSandía.insets = new Insets(0, 0, 5, 5);
+		gbc_btnSandía.gridx = 1;
+		gbc_btnSandía.gridy = 6;
+		contentPane.add(btnSandía, gbc_btnSandía);
+		
+		JButton btnCereza = new JButton("Cereza");
+		btnCereza.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Cereza";
+			}
+		});
+		GridBagConstraints gbc_btnCereza = new GridBagConstraints();
+		gbc_btnCereza.insets = new Insets(0, 0, 5, 5);
+		gbc_btnCereza.gridx = 2;
+		gbc_btnCereza.gridy = 6;
+		contentPane.add(btnCereza, gbc_btnCereza);
+		
+		JButton btnLimon = new JButton("Limón");
+		btnLimon.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Limón";
+			}
+		});
+		GridBagConstraints gbc_btnLimon = new GridBagConstraints();
+		gbc_btnLimon.insets = new Insets(0, 0, 5, 5);
+		gbc_btnLimon.gridx = 4;
+		gbc_btnLimon.gridy = 6;
+		contentPane.add(btnLimon, gbc_btnLimon);
+		
+		JButton btnFresa = new JButton("Fresa");
+		btnFresa.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Fresa";
+			}
+		});
+		GridBagConstraints gbc_btnFresa = new GridBagConstraints();
+		gbc_btnFresa.insets = new Insets(0, 0, 5, 0);
+		gbc_btnFresa.gridx = 5;
+		gbc_btnFresa.gridy = 6;
+		contentPane.add(btnFresa, gbc_btnFresa);
+		
+		JButton btnPiña = new JButton("Piña");
+		btnPiña.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Piña";
+			}
+		});
+		GridBagConstraints gbc_btnPiña = new GridBagConstraints();
+		gbc_btnPiña.insets = new Insets(0, 0, 0, 5);
+		gbc_btnPiña.gridx = 1;
+		gbc_btnPiña.gridy = 8;
+		contentPane.add(btnPiña, gbc_btnPiña);
+		
+		JButton btnMandarina = new JButton("Mandarina");
+		btnMandarina.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Mandarina";
+			}
+		});
+		GridBagConstraints gbc_btnMandarina = new GridBagConstraints();
+		gbc_btnMandarina.insets = new Insets(0, 0, 0, 5);
+		gbc_btnMandarina.gridx = 2;
+		gbc_btnMandarina.gridy = 8;
+		contentPane.add(btnMandarina, gbc_btnMandarina);
+		
+		JButton btnGranada = new JButton("Grananda");
+		btnGranada.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Granada";
+			}
+		});
+		GridBagConstraints gbc_btnGranada = new GridBagConstraints();
+		gbc_btnGranada.insets = new Insets(0, 0, 0, 5);
+		gbc_btnGranada.gridx = 4;
+		gbc_btnGranada.gridy = 8;
+		contentPane.add(btnGranada, gbc_btnGranada);
+		
+		JButton btnNaranja = new JButton("Naranja");
+		btnNaranja.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MostrarPorPantalla = "Naranja";
+			}
+		});
+		GridBagConstraints gbc_btnNaranja = new GridBagConstraints();
+		gbc_btnNaranja.gridx = 5;
+		gbc_btnNaranja.gridy = 8;
+		contentPane.add(btnNaranja, gbc_btnNaranja);
+	}
+
+}

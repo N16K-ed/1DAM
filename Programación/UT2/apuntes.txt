@@ -1,0 +1,17 @@
+	CLASE  Coche						OBJETO miCoche
+
+								
+	CARACTERÍSTICAS							Color -> Rojo
+	public string (texto)color, marca, modelo...			Marca -> Peugeot
+	public int (numero) potencia, precio...				Modelo -> 407
+									Potencia -> 120
+	MÉTODOS								Precio -> 30000
+	
+	(Modo Escritor)						LLAMAR A UN METODO
+	cambiarColor
+	cambiarPrecio						miCoche.cambiarColor(Azul); -----> color -> Azul
+								
+	(Modo Lector)
+	devuelvePotencia					miCoche.devuelvePotencia(); -----> Potencia -> 120
+	
+								
