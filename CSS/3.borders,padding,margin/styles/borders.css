@@ -1,0 +1,126 @@
+body{
+    background-color: rgb(76, 76, 174);
+    color: white;
+}
+.material-symbols-outlined{    
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+.row1{
+    color: yellow;    
+    font-weight: bold;
+    font-size: x-small;
+    border-style: solid;
+    border-color: darkblue;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-width: 2px;    
+    
+}
+.r1{
+    text-align: center;
+    padding-left: 5px;
+}
+.flight{
+    padding-right: 300px;
+}
+.depT{
+    padding-right: 150px;
+}
+.arrT{
+    padding-right: 150px;
+}
+.dest{
+    padding-right: 150px;
+}
+.row2{    
+    padding-top: 10px;
+    color: rgb(142, 255, 255);    
+    border-style: solid;
+    border-color: darkblue;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-width: 2px;    
+    
+}
+.row3{
+    padding-top: 10px;
+    color: rgb(142, 255, 255);    
+    border-style: solid;
+    border-color: darkblue;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-width: 2px;    
+    
+}
+.row4{
+    padding-top: 10px;
+    color: rgb(142, 255, 255);    
+    border-style: solid;
+    border-color: darkblue;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-width: 2px;    
+    
+}
+.row5{
+    padding-top: 10px;
+    color: rgb(142, 255, 255);    
+    border-style: solid;
+    border-color: darkblue;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-width: 2px;    
+    
+}
+.row6{
+    padding-top: 10px;
+    color: rgb(142, 255, 255);
+    border-style: solid;
+    border-color: darkblue;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-width: 2px;    
+    
+}
+.r2{
+    font-size: large;
+    text-align: center;
+    padding-left: 5px;
+}
+.r3{
+    font-size: large;
+    text-align: center;
+    padding-left: 5px;
+}
+.r4{
+    font-size: large;
+    text-align: center;
+    padding-left: 5px;
+}
+.r5{
+    font-size: large;
+    text-align: center;
+    padding-left: 5px;
+}
+.r6{
+    font-size: large;
+    text-align: center;
+    padding-left: 5px;
+}
+.description{    
+    font-size: x-small;
+    padding-left: 5px;
+}
+.delayed{
+    color: red;
+}

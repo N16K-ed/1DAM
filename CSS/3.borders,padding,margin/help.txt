@@ -1,0 +1,14 @@
+All elements on the page have:
+	margin: 0; removes all outer space around elements.
+	padding: auto;
+Body:
+Sets a blue background (rgb(76, 76, 174)).
+Text-color:white
+
+row1:
+is a class that adds a bottom border, bold text, and changes the color to yellow.
+
+Inner Elements (Classes .r1, .flight, .depT, .arrT, .dest):
+These classes apply specific spacing and alignment to elements inside .row1.
+r1: Adds space to the left and centers text.
+.flight, .depT, .arrT, .dest: Add space to the right (for layout purposes).
