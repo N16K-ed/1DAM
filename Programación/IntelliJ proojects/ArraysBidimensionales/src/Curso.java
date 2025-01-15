@@ -1,5 +1,3 @@
-import com.sun.security.jgss.GSSUtil;
-
 public class Curso {
     private static final int MAX_ESTUDIANTES = 20;
     private static final int MAX_ASIGNATURAS = 6;
@@ -20,7 +18,7 @@ public class Curso {
     public void imprimirNotas(){
         System.out.print("Asignaturas  :   ");
         for (int asig = 0; asig < MAX_ASIGNATURAS; asig++){
-            System.out.print("Asig" + asig + " ");
+            System.out.print("Asig" + (asig+1) + " ");
         }
         System.out.print("   |  Nota Media del Estudiante:  |");
         System.out.println("\n--------------------------------------------------------|------------------------------|");// Imprime la cabecera de la tabla
@@ -39,7 +37,7 @@ public class Curso {
             }
             System.out.print("|  ");
             if (String.valueOf(y+1).length() == 1){ //If para ajustar los espacios de la tabla
-                System.out.print("Estudiante  " + (y+1) + ":      ");//Imprime el estudiante con el numero, paralas medias de cada estudiante
+                System.out.print("Estudiante  " + (y+1) + ":      ");//Imprime el estudiante con el numero, para las medias de cada estudiante
             }else{
                 System.out.print("Estudiante " + (y+1) + ":      ");
             }
@@ -59,7 +57,8 @@ public class Curso {
             if (String.valueOf(calcularMedias()[medias]).length() == 3){ //If para ajustar los espacios de la tabla
                 System.out.print(" " + calcularMedias()[medias]+ "  "); //Imprime medias por asignatura
             }else{
-                System.out.print(calcularMedias()[medias]+ "  ");
+                System.out.printf("%.2f", calcularMedias()[medias]);
+                System.out.print("  ");
             }
 
         }

@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=ArraySinRepetidos()
+comment0.text=\nConstructor\ \n\n
+comment1.params=nuevoElemento
+comment1.target=void\ insertar(int)
+comment1.text=\nA\u00F1ade\ un\ nuevo\ valor\ \u00FAnicamente\ si\ no\ est\u00E1\n@param\ nuevoElemento\ el\ valor\ a\ a\u00F1adir\n\n
+comment2.params=pos\ nuevoElemento
+comment2.target=void\ insertar(int,\ int)
+comment2.text=\nA\u00F1ade\ un\ nuevo\ valor\ \u00FAnicamente\ si\ no\ est\u00E1\nen\ la\ posici\u00F3n\ indicada\n\n@param\ nuevoElemento\ el\ valor\ a\ a\u00F1adir\n@param\ pos\ la\ posici\u00F3n\ en\ la\ que\ insertar\n\n
+comment3.params=nuevoElemento
+comment3.target=void\ insertarEnOrden(int)
+comment3.text=\nA\u00F1ade\ un\ nuevo\ valor\ \u00FAnicamente\ si\ no\ est\u00E1\ny\ lo\ inserta\ en\ orden\n@param\ nuevoElemento\ el\ valor\ a\ a\u00F1adir\n\n
+comment4.params=numero
+comment4.target=boolean\ estaElemento(int)
+comment4.text=\nDetecta\ si\ un\ valor\ est\u00E1\ o\ no\ en\ el\ array\nSe\ hace\ una\ b\u00FAsqueda\ lineal\n@param\ \ numero\ el\ valor\ a\ buscar\n@return\ \ \ true\ si\ est\u00E1\ el\ valor,\ false\ en\ otro\ caso\n\n
+comment5.params=numero
+comment5.target=boolean\ estaElementoBinaria(int)
+comment5.text=\nDetecta\ si\ un\ valor\ est\u00E1\ o\ no\ en\ el\ array\nSe\ hace\ una\ b\u00FAsqueda\ dicot\u00F3mica\n@param\ \ numero\ el\ valor\ a\ buscar\n@return\ \ \ true\ si\ est\u00E1\ el\ valor,\ false\ en\ otro\ caso\n\n
+comment6.target=boolean\ estaCompleto()
+comment6.text=\nDetecta\ si\ el\ array\ est\u00E1\ completo\n@return\ true\ si\ est\u00E1\ completo\n\n
+comment7.target=String\ toString()
+comment7.text=\nDetecta\ si\ el\ array\ est\u00E1\ completo\n@return\ true\ si\ est\u00E1\ completo\n\n
+numComments=8
