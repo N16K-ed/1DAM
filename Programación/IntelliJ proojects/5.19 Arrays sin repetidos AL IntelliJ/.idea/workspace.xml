@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27bca4e9-a55e-4c2d-8b4c-3ab5ca70552c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ArraysBidimensionales/src/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ArraysBidimensionales/src/Curso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ArraysBidimensionales/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ArraysBidimensionales/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1DAM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto UT5/FRAN_SAN_NICOLÁS_Proyecto Explorador" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto UT5/FRAN_SAN_NICOLÁS_Proyecto Explorador" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,21 +17,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "N16K-ed"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;N16K-ed&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/N16K-ed/1DAM.git",
-    "accountId": "1911c53c-b183-45ae-8ac6-cd1b08ebc21f"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/N16K-ed/1DAM.git&quot;,
+    &quot;accountId&quot;: &quot;1911c53c-b183-45ae-8ac6-cd1b08ebc21f&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2rRbtvQQL28oNpxnfn0PacZZfLz" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -42,7 +43,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/AlumTA/Desktop/1DAM/Programación/IntelliJ proojects/5.19 Arrays sin repetidos AL IntelliJ/src/Main.java"
+    "onboarding.tips.debug.path": "C:/Users/AlumTA/Desktop/1DAM/Programación/IntelliJ proojects/5.19 Arrays sin repetidos AL IntelliJ/src/Main.java",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
   <component name="RunManager">
