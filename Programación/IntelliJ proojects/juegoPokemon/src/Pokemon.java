@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Pokemon {
 
     private String nombre;

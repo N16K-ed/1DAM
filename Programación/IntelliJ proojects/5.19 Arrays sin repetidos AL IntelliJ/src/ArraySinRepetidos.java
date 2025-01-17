@@ -36,12 +36,15 @@ public class ArraySinRepetidos
 
      */
     public void insertar(int nuevoElemento){
-        if (!estaElemento(nuevoElemento) && siguiente < elementos.length) {
+        if ((!estaElemento(nuevoElemento)) && !estaCompleto()) {
             elementos[siguiente] = nuevoElemento;
             siguiente++;
         } else if (estaCompleto()) {
             System.out.println("La lista de elementos está completa.");
-        } else{
+        }else if (nuevoElemento == 0){
+
+        }
+        else{
             System.out.println("El elemento ya se encuentra registrado en la lista.");
         }
     }
@@ -54,23 +57,12 @@ public class ArraySinRepetidos
      * @return   true si está el valor, false en otro caso
      */
     public boolean estaElemento(int numero){
-        boolean encontrado = false;
-        int izquierda = 0;
-        int derecha = elementos.length - 1;
-        int mitad;
-        while (izquierda<= derecha && ! encontrado) {
-            mitad = (izquierda + derecha) / 2;
-            if (elementos[mitad] == numero) {
-                encontrado = true;
-            }
-            else if (elementos[mitad] > numero) {
-                derecha = mitad - 1;
-            }
-            else {
-                izquierda = mitad + 1;
+        for (int i = 0; i < elementos.length; i++){
+            if (numero == elementos[i]){
+                return true;
             }
         }
-        return encontrado;
+        return false;
     }
      /**
      * Devuelve la representación textual del array de la forma {4, 6, 8, 13, 9}

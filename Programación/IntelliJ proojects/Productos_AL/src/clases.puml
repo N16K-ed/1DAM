@@ -1,0 +1,38 @@
+@startuml
+class GestorProductos {
+    - Producto[] productos
+    - int contador
+
+    + GestorProductos(int tamano)
+    + void agregarProducto(Producto producto)
+    + Producto buscarPorNombre(String nombre)
+    + Producto[] buscarPorCategoria(Categoria categoria)
+    + void ordenarPorPrecio()
+    + void ordenarPorNombre()
+    + void mostrarProductos()
+    + void buscarPorNombre(Scanner scanner)
+    + void buscarPorCategoria(Scanner scanner)
+}
+
+class Producto {
+    - String nombre
+    - double precio
+    - Categoria categoria
+    - String descripcion
+
+    + Producto(String nombre, double precio, Categoria categoria, String descripcion)
+    + String getNombre()
+    + double getPrecio()
+    + Categoria getCategoria()
+    + String toString()
+}
+
+enum Categoria {
+    ALIMENTACION
+    ELECTRONICA
+    ROPA
+    HOGAR
+}
+
+GestorProductos "1" *-- "0..*" Producto
+@enduml

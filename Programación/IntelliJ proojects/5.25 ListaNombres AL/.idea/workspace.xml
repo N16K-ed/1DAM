@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="95aa90ec-b9a4-4f91-aac9-501910bd735a" name="Changes" comment="">
+    <list default="true" id="b1609068-ddd1-41e0-903d-f981d09b0211" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../5.19 Arrays sin repetidos AL IntelliJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../5.19 Arrays sin repetidos AL IntelliJ/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../5.19 Arrays sin repetidos AL IntelliJ/out/production/5.19 Arrays sin repetidos AL IntelliJ/ArraySinRepetidos.class" beforeDir="false" afterPath="$PROJECT_DIR$/../5.19 Arrays sin repetidos AL IntelliJ/out/production/5.19 Arrays sin repetidos AL IntelliJ/ArraySinRepetidos.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../5.19 Arrays sin repetidos AL IntelliJ/out/production/5.19 Arrays sin repetidos AL IntelliJ/InterfazUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/../5.19 Arrays sin repetidos AL IntelliJ/out/production/5.19 Arrays sin repetidos AL IntelliJ/InterfazUsuario.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../5.19 Arrays sin repetidos AL IntelliJ/src/ArraySinRepetidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/../5.19 Arrays sin repetidos AL IntelliJ/src/ArraySinRepetidos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../5.19 Arrays sin repetidos AL IntelliJ/src/InterfazUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../5.19 Arrays sin repetidos AL IntelliJ/src/InterfazUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RepasoArrays2D/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RepasoArrays2D/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RepasoArrays2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RepasoArrays2D/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RepasoArrays2D/out/production/RepasoArrays2D/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RepasoArrays2D/out/production/RepasoArrays2D/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RepasoArrays2D/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RepasoArrays2D/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../juegoPokemon/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../juegoPokemon/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../juegoPokemon/src/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../juegoPokemon/src/Pokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Proyecto UT5/FRAN_SAN_NICOLÁS_Proyecto Explorador" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto UT5/FRAN_SAN_NICOLÁS_Proyecto Explorador" afterDir="false" />
@@ -22,54 +19,33 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;N16K-ed&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/N16K-ed/1DAM.git&quot;,
-    &quot;accountId&quot;: &quot;1911c53c-b183-45ae-8ac6-cd1b08ebc21f&quot;
-  }
-}</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2rMCLN7dXtM44554Yy2LlRNOLau" />
+  <component name="ProjectId" id="2rlOzPdZjXEP0PkdaGub7NgESda" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/AlumTA/Desktop/1DAM/Programación/IntelliJ proojects/5.20 Curso Alumno AL&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/AlumTA/Desktop/1DAM/Programación/IntelliJ proojects/RepasoArrays2D/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/AlumTA/Desktop/1DAM/Programación/IntelliJ proojects/Productos_AL"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="95aa90ec-b9a4-4f91-aac9-501910bd735a" name="Changes" comment="" />
-      <created>1736359500678</created>
+      <changelist id="b1609068-ddd1-41e0-903d-f981d09b0211" name="Changes" comment="" />
+      <created>1737130456943</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1736359500678</updated>
+      <updated>1737130456943</updated>
     </task>
     <servers />
   </component>

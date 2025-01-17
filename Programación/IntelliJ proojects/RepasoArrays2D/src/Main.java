@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Ejercicio 7 con esteroides: \n");
-        Estudiante[][] CIMAS = new Estudiante[1][1];
+        Estudiante[][] CIMAS = new Estudiante[99][99];
         for (int rellenarFilas = 0; rellenarFilas < CIMAS.length; rellenarFilas++){
             for (int rellenarColumnas = 0; rellenarColumnas < CIMAS[rellenarFilas].length; rellenarColumnas++){
                 CIMAS[rellenarFilas][rellenarColumnas] = new Estudiante();

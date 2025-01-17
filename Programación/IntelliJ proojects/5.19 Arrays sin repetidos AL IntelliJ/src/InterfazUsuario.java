@@ -32,15 +32,8 @@ public class InterfazUsuario
         for(int i = 0; i < 12; i++){
             System.out.println("Introduzca un número en la lista: ");
             unArray.insertar(teclado.nextInt());
-        }
-        /*int numeroDeLaSuerte = (int)(Math.random()*21);
-        if(unArray.estaElemento(numeroDeLaSuerte)){ //Para probae el metodo estaElemento
-            System.out.println("Número de la suerte: " + numeroDeLaSuerte + ".\n¡¡¡Has ganado la loteria!!!");
-        }*/
-        System.out.println(unArray);
-        
-        
-                
+        }printArray();
+
     }
     
     /**
@@ -49,8 +42,12 @@ public class InterfazUsuario
      */
     private void printArray()
     {
-        
+        System.out.println(unArray);
     }
     
     
 }
+/*int numeroDeLaSuerte = (int)(Math.random()*21);
+        if(unArray.estaElemento(numeroDeLaSuerte)){ //Para probae el metodo estaElemento
+            System.out.println("Número de la suerte: " + numeroDeLaSuerte + ".\n¡¡¡Has ganado la loteria!!!");
+        }*/
