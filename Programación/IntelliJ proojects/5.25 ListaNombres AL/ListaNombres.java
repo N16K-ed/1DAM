@@ -4,6 +4,8 @@
  * en orden léxicográfico  
  * 
  */
+
+import java.util.Arrays;
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
@@ -20,7 +22,8 @@ public class ListaNombres
          */
         public ListaNombres(int n) 
         {              
-              
+              lista = new String[n];
+              pos = 0;
         }
 
         /**
@@ -28,8 +31,7 @@ public class ListaNombres
          */
         public boolean  listaVacia()
         {
-                 
-            
+            return pos == 0;
         }
         
         /**
@@ -38,8 +40,13 @@ public class ListaNombres
          */
         public boolean  listaLlena()
         {
-                
-            
+            for (int i = 0; i < lista.length; i++){
+                pos = 0;
+                if(lista[i] != null){
+                    pos++;
+                }
+            }
+            return pos >= lista.length;
         }
         
         /**
@@ -56,8 +63,13 @@ public class ListaNombres
          */
         public boolean insertarNombre(String nombre)
         {
-              
-            
+              for (int i = 0; i < lista.length; i++){
+                      if (!estaNombre(nombre) && !listaLlena()){
+                      lista[i] = nombre;
+                      return true;
+                  }
+              }
+            return false;
         }
         
         /**
@@ -70,8 +82,13 @@ public class ListaNombres
          */
         private boolean estaNombre(String nombre)
         {
-                
-            
+            for (int i = 0; i< lista.length; i++){
+                if (lista[i] != null && nombre.equals(lista[i])  ){
+                    return true;
+                }
+            }
+
+            return false;
         }
         
         /**
@@ -85,9 +102,16 @@ public class ListaNombres
          */
         public String nombreMasLargo()
         {
-               
-            
-            
+            int caracteres = 0;
+            String maslargo = "";
+               for(int i = 0; i < lista.length; i++) {
+                   if (lista[i] != null && lista[i].length() > caracteres){
+                       caracteres = lista[i].length();
+                       maslargo = lista[i];
+                   }
+
+               }
+            return maslargo;
         }
         
         /**
@@ -100,7 +124,11 @@ public class ListaNombres
          */
         public void borrarLetra(char letra)
         {
-                
+                for (int i = 0; i < lista.length; i++){
+                    if(lista[i] != null && lista[i].charAt(0) == letra){
+                        lista[i] = null;
+                    }
+                }
             
             
         }
@@ -114,7 +142,7 @@ public class ListaNombres
          */
         private void borrarDePosicion(int p)
         {
-               
+               lista[p] = null;
         }
          
        
@@ -123,13 +151,18 @@ public class ListaNombres
          * Cuenta cuántos nombres empiezan por una determinada 
          * cadena sin importar   mayúsculas o minúsculas
          *
-         * @param  la cadena de comienzo
+         * @param  inicio cadena de comienzo
          * @return  la cantidad de nombres calculados   
          */
         public int empiezanPor(String inicio)
         {
-               
-                
+               int cuenta = 0;
+               for (int i = 0; i < lista.length; i++){
+                   if (lista[i] != null && lista[i].startsWith(inicio)){
+                       cuenta++;
+                   }
+               }
+                return cuenta;
         }
         
          /** 
@@ -137,14 +170,26 @@ public class ListaNombres
          * Devuelve un array con los  nombres que empiezan por una determinada 
          * letra sin importar si es mayúscula o minúscula
          * 
-         * @param  la letra de comienzo
+         * @param  letra letra de comienzo
          * @return  la cantidad de nombres encontrados
          *          con esa letra   
          */ 
         public String[] empiezanPorLetra(char letra)
         {
-                
-                
+                int cuenta = 0;
+                for(int i = 0; i < lista.length; i++){
+                    if(lista[i] != null && (lista[i].toLowerCase().charAt(0) == letra || lista[i].toUpperCase().charAt(0) == letra)){
+                        cuenta ++;
+                    }
+                }
+                String[] nuevo = new String[cuenta];
+                int posnuevo = 0;
+                for (int i = 0; i < lista.length; i++){
+                    if(lista[i] != null && (lista[i].toLowerCase().charAt(0) == letra || lista[i].toUpperCase().charAt(0) == letra)){
+                        nuevo[posnuevo] = lista[i];
+                    }
+                }
+                return nuevo;
         }
         
        /**
@@ -154,7 +199,7 @@ public class ListaNombres
          */
         public String toString()
         {
-                
+           return Arrays.toString(lista);
         }
         
           /**
@@ -187,6 +232,22 @@ public class ListaNombres
 				 sc.close();
 			 }
 			 
+        }
+
+        public String[] invertir(){
+
+            String [] invertido = new String[lista.length];
+            invertido = Arrays.copyOf(lista, lista.length);
+            for (int i = 0; i < (invertido.length - 1)/2; i++){
+                String temp = invertido[i];
+                invertido[i] = invertido[invertido.length - 1 - i];
+                invertido[invertido.length - 1 -i] = temp;
+            }
+            return invertido;
+        }
+
+        public static String invertir(String nombre){
+            return new StringBuilder(nombre).reverse().toString();
         }
         
 }

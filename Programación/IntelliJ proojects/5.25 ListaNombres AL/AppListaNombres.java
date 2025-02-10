@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 /**
  * 
@@ -22,7 +23,15 @@ public class AppListaNombres
      */
     public static void main(String[] args)
     {
-       
+       ListaNombres listaNueva = new ListaNombres(20);
+       listaNueva.cargarDeFichero();
+       listaNueva.printLista();
+       System.out.println("El nombre más largo es " + listaNueva.nombreMasLargo() );
+       listaNueva.borrarLetra('r');
+       listaNueva.printLista();
+       System.out.println(listaNueva.empiezanPor("aL"));
+       System.out.println("Empiezan por 'a': \n" + Arrays.toString(listaNueva.empiezanPorLetra('a')));
+
         
         
     }
