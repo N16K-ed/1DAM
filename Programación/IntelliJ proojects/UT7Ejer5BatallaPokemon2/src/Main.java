@@ -151,6 +151,7 @@ public class Main {
         teclado.nextLine();
 
         System.out.println("\nTurno 3:\n");
+        System.out.println("¡¡Los Pokémon se están atacando a ellos mismos!!");
         charm.recibirAtaque(charm, charm.atacar(charm));
         squirtle.recibirAtaque(squirtle, squirtle.atacar(squirtle));
         bulba.recibirAtaque(bulba, bulba.atacar(bulba));
