@@ -26,7 +26,26 @@ public enum TileType {
     AGUA3("/pruebas/agua3.png"),
     AGUA4("/pruebas/agua4.png"),
     AGUA5("/pruebas/agua5.png"),
-    AGUA6("/pruebas/agua6.png"),;
+    AGUA6("/pruebas/agua6.png"),
+    AGUA7("/pruebas/agua7.png"),
+    ARBOL_ARRIBA_DER("/pruebas/arbol_arriba_der.png"),
+    ARBOL_ARRIBA_IZD("/pruebas/arbol_arriba_izd.png"),
+    ARBOL_ABAJO_DER("/pruebas/arbol_abajo_der.png"),
+    ARBOL_ABAJO_IZD("/pruebas/arbol_abajo_izd.png"),
+    AGUA_BORDE_DER("/pruebas/agua_bordes_der.png"),
+    AGUA_BORDE_IZD("/pruebas/agua_bordes_izd.png"),
+    AGUA_BORDE_ABAJO("/pruebas/agua_bordes_abajo.png"),
+    AGUA_BORDE_ARRIBA("/pruebas/agua_bordes_arriba.png"),
+    AGUA_ESQUINA_ARRIBA_DER("/pruebas/agua_esquina_der.png"),
+    AGUA_ESQUINA_ARRIBA_IZD("/pruebas/agua_esquina_izd.png"),
+    AGUA_ESQUINA_ABAJO_DER("/pruebas/agua_esquina_abajo_der.png"),
+    AGUA_ESQUINA_ABAJO_IZD("/pruebas/agua_esquina_abajo_izd.png"),
+    GIRO_BORDE_AGUA_ARRIBA_DER("/pruebas/agua_giros_arriba_der.png"),
+    GIRO_BORDE_AGUA_ARRIBA_IZD("/pruebas/agua_giros_arriba_izd.png"),
+    GIRO_BORDE_AGUA_ABAJO_DER("/pruebas/agua_giros_abajo_der.png"),
+    GIRO_BORDE_AGUA_ABAJO_IZD("/pruebas/agua_giros_abajo_izd.png"),
+    PUERTA_CUEVA("/pruebas/puerta_cueva.png");
+    ;
 
 
 

@@ -149,5 +149,4 @@ public class Ruta2 extends Mapa {
             }
         }
     }
-
 }
