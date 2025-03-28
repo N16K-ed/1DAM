@@ -1,10 +1,17 @@
 package es.masanz.ut7.pokemonfx.model.map;
 
+import es.masanz.ut7.pokemonfx.model.base.Entrenador;
+import es.masanz.ut7.pokemonfx.model.base.Evento;
 import es.masanz.ut7.pokemonfx.model.base.Mapa;
+import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
+import es.masanz.ut7.pokemonfx.model.enums.TileType;
+import es.masanz.ut7.pokemonfx.model.fx.NPC;
 import es.masanz.ut7.pokemonfx.model.pokemons.Bulbasaur;
 import es.masanz.ut7.pokemonfx.model.pokemons.Charmander;
 
 import java.util.ArrayList;
+
+import static es.masanz.ut7.pokemonfx.util.Configuration.ABAJO;
 
 public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
 
@@ -16,10 +23,203 @@ public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
         pokemonSalvajes.add(new Charmander(1));
 
 
-    }
-
-    @Override
+    }@Override
     protected void cargarMapa() {
 
+        int[][] mapaRuta = {
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+
+                };
+
+        this.inicioX = 15;
+        this.inicioY = 30;
+
+        this.altura = mapaRuta.length;
+        this.anchura = mapaRuta[0].length;
+        this.nombre = "Lago Veraz";
+
+        this.mapData = new int[altura][anchura];
+        this.collisionMap = new int[altura][anchura];
+        this.teleportMap = new String[altura][anchura];
+        this.eventsMap = new Evento[altura][anchura];
+        this.npcs = new ArrayList<>();
+
+        // teleportMap[3][9] = "Ruta 1";
+
+        Entrenador helio = new Entrenador();
+        helio.incluirPokemonParaCombatir(0, new Bulbasaur(1));
+
+        npcs.add(new NPC(2, 1, ABAJO, helio));
+
+        for (int y = 0; y < altura; y++) {
+            for (int x = 0; x < anchura; x++) {
+                switch (mapaRuta[y][x]) {
+                    case 1:
+                        mapData[y][x] = TileType.NEGRO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 2:
+                        mapData[y][x] = TileType.CESPED.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 3:
+                        mapData[y][x] = TileType.CESPED_HIERBA.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 4:
+                        mapData[y][x] = TileType.CESPED_ARBUSTO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 5:
+                        mapData[y][x] = TileType.TELEPORT_RED.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        teleportMap[y][x] = "Ruta 1";
+                        break;
+                    case 6:
+                        mapData[y][x] = TileType.MONTE_CENTRO.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 7:
+                        mapData[y][x] = TileType.MONTE_BORDE_SUPERIOR.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 8:
+                        mapData[y][x] = TileType.MONTE_BORDE_INFERIOR.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 9:
+                        mapData[y][x] = TileType.MONTE_BORDE_IZQUIERDA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 10:
+                        mapData[y][x] = TileType.MONTE_BORDE_DERECHA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 11:
+                        mapData[y][x] = TileType.MONTE_ESQUINA_SUPERIOR_IZQUIERDA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 12:
+                        mapData[y][x] = TileType.MONTE_ESQUINA_SUPERIOR_DERECHA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 13:
+                        mapData[y][x] = TileType.MONTE_ESQUINA_INFERIOR_IZQUIERDA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 14:
+                        mapData[y][x] = TileType.MONTE_ESQUINA_INFERIOR_DERECHA.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 15: //AGUA
+                        mapData[y][x] = TileType.AGUA1.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal(); //Cambiar si añade función del agua
+                        break;
+                    case 16: //ARBOL1
+                        mapData[y][x] = TileType.ARBOL_ARRIBA_IZD.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 17: //ARBOL2
+                        mapData[y][x] = TileType.ARBOL_ARRIBA_DER.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 18: //ARBOL 3
+                        mapData[y][x] = TileType.ARBOL_ABAJO_IZD.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 19: //ARBOL4
+                        mapData[y][x] = TileType.ARBOL_ABAJO_DER.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 20: //BORDE DEL AGUA DER
+                        mapData[y][x] = TileType.AGUA_BORDE_DER.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 21: //BORDE DEL AGUA IZD
+                        mapData[y][x] = TileType.AGUA_BORDE_IZD.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 22: //BORDE DEL AGUA ABAJO
+                        mapData[y][x] = TileType.AGUA_BORDE_ABAJO.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 23: //BORDE DEL AGUA ARRIBA
+                        mapData[y][x] = TileType.AGUA_BORDE_ARRIBA.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 24: //ESQUINA DEL BORDE DEL AGUA ARRIBA-DER
+                        mapData[y][x] = TileType.AGUA_ESQUINA_ARRIBA_DER.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 25: //ESQUINA DEL BORDE DEL AGUA ARRIBA-IZD
+                        mapData[y][x] = TileType.AGUA_ESQUINA_ARRIBA_IZD.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 26: //ESQUINA DEL BORDE DEL AGUA ABAJO-DER
+                        mapData[y][x] = TileType.AGUA_ESQUINA_ABAJO_DER.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 27: //ESQUINA DEL BORDE DEL AGUA ABAJO-IZD
+                        mapData[y][x] = TileType.AGUA_ESQUINA_ABAJO_IZD.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 28: //PUERTA DE CUEVA
+                        mapData[y][x] = TileType.PUERTA_CUEVA.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 29: //GIRO AGUA ARRIBA-DER
+                        mapData[y][x] = TileType.GIRO_BORDE_AGUA_ARRIBA_DER.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 30: //GIRO AGUA ARRIBA-IZD
+                        mapData[y][x] = TileType.GIRO_BORDE_AGUA_ARRIBA_IZD.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 31: //GIRO AGUA ABAJO-DER
+                        mapData[y][x] = TileType.GIRO_BORDE_AGUA_ABAJO_DER.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    case 32: //GIRO AGUA ABAJO-IZD
+                        mapData[y][x] = TileType.GIRO_BORDE_AGUA_ABAJO_IZD.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                    default:
+                        mapData[y][x] = TileType.CAMINO_BLANCO.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        break;
+                }
+            }
+        }
     }
 }

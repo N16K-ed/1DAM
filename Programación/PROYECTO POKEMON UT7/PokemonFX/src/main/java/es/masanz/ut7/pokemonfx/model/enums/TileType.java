@@ -44,8 +44,9 @@ public enum TileType {
     GIRO_BORDE_AGUA_ARRIBA_IZD("/pruebas/agua_giros_arriba_izd.png"),
     GIRO_BORDE_AGUA_ABAJO_DER("/pruebas/agua_giros_abajo_der.png"),
     GIRO_BORDE_AGUA_ABAJO_IZD("/pruebas/agua_giros_abajo_izd.png"),
-    PUERTA_CUEVA("/pruebas/puerta_cueva.png");
-    ;
+    PUERTA_CUEVA("/pruebas/puerta_cueva.png"),
+    NEGRO("/pruebas/negro.png");
+
 
 
 
