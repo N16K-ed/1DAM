@@ -219,6 +219,7 @@ public class Ruta2_Sinnoh_LagoVeraz extends Mapa {
                     case 28: //PUERTA DE CUEVA
                         mapData[y][x] = TileType.PUERTA_CUEVA.ordinal();
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        teleportMap[y][x] = "Caverna Veraz";
                         break;
                     case 29: //GIRO AGUA ARRIBA-DER
                         mapData[y][x] = TileType.GIRO_BORDE_AGUA_ARRIBA_DER.ordinal();

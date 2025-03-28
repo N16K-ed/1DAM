@@ -138,7 +138,7 @@ public class MapController {
         };
         gameLoop.start();
 
-        Button actionButton = new Button("Gestionar nuestros Pokemon");
+        Button actionButton = new Button("Equipo y PC");
         actionButton.setOnAction(e -> {
             PokePCController pcC = new PokePCController();
             pcC.load(primaryStage, mainStage.getScene());
@@ -147,7 +147,7 @@ public class MapController {
         actionButton.setTranslateY(-(VIEW_HEIGHT/2) + 25);
         root.getChildren().add(actionButton);
 
-        primaryStage.setTitle("Ruta 1");
+        primaryStage.setTitle("Pokémon Oro");
         primaryStage.setScene(scene);
         primaryStage.sceneProperty().addListener((obs, oldScene, newScene) -> {
             if (newScene == scene) {
@@ -223,6 +223,9 @@ public class MapController {
                 int tileX = (int) (playerX / TILE_SIZE);
                 int tileY = (int) (playerY / TILE_SIZE);
                 if (mapData[tileY][tileX] == TileType.CESPED_HIERBA.ordinal() && Math.random() < PROBABILIDAD_POKEMON_SALVAJE) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA1.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
                     cambiarAEscenario(null);
                 }
                 if(teleportMap[tileY][tileX]!=null){

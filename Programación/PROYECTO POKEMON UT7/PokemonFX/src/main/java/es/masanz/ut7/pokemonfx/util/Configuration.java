@@ -18,6 +18,7 @@ public class Configuration {
     public static final int MOVE_SPEED = 1 * SCALE_FACTOR;
     public static final int VELOCIDAD_CAMBIO_SPRITES = 4;
     public static final double PROBABILIDAD_POKEMON_SALVAJE = 0.1;
+    public static final double PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA = 0.02;
 
     // CONSTANTES DEL COMBATECONTROLLER
     public static final String IMAGE_PATH = "/pokemons/";
