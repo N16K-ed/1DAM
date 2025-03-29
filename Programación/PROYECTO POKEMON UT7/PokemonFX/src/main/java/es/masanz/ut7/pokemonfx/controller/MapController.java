@@ -225,9 +225,90 @@ public class MapController {
                 if (mapData[tileY][tileX] == TileType.CESPED_HIERBA.ordinal() && Math.random() < PROBABILIDAD_POKEMON_SALVAJE) {
                     cambiarAEscenario(null);
                 }
+
+                //AGUA SALVAJE
                 if (mapData[tileY][tileX] == (TileType.AGUA1.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
                     cambiarAEscenario(null);
                 }
+                if (mapData[tileY][tileX] == (TileType.AGUA_BORDE_DER.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_BORDE_IZD.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_BORDE_ABAJO.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_BORDE_ARRIBA.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_ESQUINA_ARRIBA_DER.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_ESQUINA_ARRIBA_IZD.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_ESQUINA_ABAJO_DER.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_ESQUINA_ABAJO_IZD.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.GIRO_BORDE_AGUA_ARRIBA_DER.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.GIRO_BORDE_AGUA_ARRIBA_IZD.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.GIRO_BORDE_AGUA_ABAJO_DER.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.GIRO_BORDE_AGUA_ABAJO_IZD.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+
+                //CUEVA SALVAJE
+                if (mapData[tileY][tileX] == (TileType.AGUA_CUEVA_ABAJO.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_CUEVA_ARRIBA.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_CUEVA_IZD.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_CUEVA_DER.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_CUEVA_ESQUINA_ARRIBA_DER.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_CUEVA_ESQUINA_ARRIBA_IZD.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_CUEVA_ESQUINA_ABAJO_DER.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_CUEVA_ESQUINA_ABAJO_IZD.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_CUEVA_ESQUINA_REVERSE_ARRIBA_DER.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_CUEVA_ESQUINA_REVERSE_ARRIBA_IZD.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_CUEVA_ESQUINA_REVERSE_ABAJO_DER.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_CUEVA_ESQUINA_REVERSE_ABAJO_IZD.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+                if (mapData[tileY][tileX] == (TileType.AGUA_CUEVA.ordinal()) && Math.random() < PROBABILIDAD_POKEMON_SALVAJE_AGUA_CUEVA) {
+                    cambiarAEscenario(null);
+                }
+
+
                 if(teleportMap[tileY][tileX]!=null){
                     reload(teleportMap[tileY][tileX]);
                 }

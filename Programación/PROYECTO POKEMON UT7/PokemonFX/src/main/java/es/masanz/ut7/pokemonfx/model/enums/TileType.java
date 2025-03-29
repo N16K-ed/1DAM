@@ -45,7 +45,28 @@ public enum TileType {
     GIRO_BORDE_AGUA_ABAJO_DER("/pruebas/agua_giros_abajo_der.png"),
     GIRO_BORDE_AGUA_ABAJO_IZD("/pruebas/agua_giros_abajo_izd.png"),
     PUERTA_CUEVA("/pruebas/puerta_cueva.png"),
-    NEGRO("/pruebas/negro.png");
+    PUERTA_CUEVA_AL_REVES("/pruebas/puerta_cueva_al_reves.png"),
+    AGUA_CUEVA_ABAJO("/pruebas/agua_cueva_en_abajo.png"),
+    AGUA_CUEVA_ARRIBA("/pruebas/agua_cueva_en_arriba.png"),
+    AGUA_CUEVA_IZD("/pruebas/agua_cueva_en_izd.png"),
+    AGUA_CUEVA_DER("/pruebas/agua_cueva_en_der.png"),
+    AGUA_CUEVA_ESQUINA_ARRIBA_DER("/pruebas/agua_cueva_esquina_der.png"),
+    AGUA_CUEVA_ESQUINA_ARRIBA_IZD("/pruebas/agua_cueva_esquina_izd.png"),
+    AGUA_CUEVA_ESQUINA_ABAJO_DER("/pruebas/agua_cueva_esquina_inferior_der.png"),
+    AGUA_CUEVA_ESQUINA_ABAJO_IZD("/pruebas/agua_cueva_esquina_inferior_izd.png"),
+    AGUA_CUEVA_ESQUINA_REVERSE_ARRIBA_DER("/pruebas/agua_cueva_giro_arriba_der.png"),
+    AGUA_CUEVA_ESQUINA_REVERSE_ARRIBA_IZD("/pruebas/agua_cueva_giro_arriba_izd.png"),
+    AGUA_CUEVA_ESQUINA_REVERSE_ABAJO_DER("/pruebas/agua_cueva_giro_abajo_der.png"),
+    AGUA_CUEVA_ESQUINA_REVERSE_ABAJO_IZD("/pruebas/agua_cueva_giro_abajo_izd.png"),
+    AGUA_CUEVA("/pruebas/agua_cueva_limpio.png"),
+    MONTE_ESQUINA_INTERIOR_DER("/pruebas/monte_esquina_interior_arriba_der.png"),
+    MONTE_ESQUINA_INTERIOR_IZD("/pruebas/monte_esquina_interior_arriba izda.png"),
+    NEGRO("/pruebas/negro.png"),
+    CUEVA_SALVAJE("/pruebas/monte_centro.png");
+
+
+
+    ;
 
 
 

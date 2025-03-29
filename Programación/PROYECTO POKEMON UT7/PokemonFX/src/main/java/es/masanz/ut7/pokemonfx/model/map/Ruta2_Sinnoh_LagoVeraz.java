@@ -7,6 +7,7 @@ import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
 import es.masanz.ut7.pokemonfx.model.enums.TileType;
 import es.masanz.ut7.pokemonfx.model.fx.NPC;
 import es.masanz.ut7.pokemonfx.model.pokemons.Bulbasaur;
+import es.masanz.ut7.pokemonfx.model.pokemons.Squirtle;
 
 import java.util.ArrayList;
 
@@ -19,7 +20,7 @@ public class Ruta2_Sinnoh_LagoVeraz extends Mapa {
     @Override
     public void cargarPokemonSalvajes(){
         pokemonSalvajes = new ArrayList<>();
-        pokemonSalvajes.add(new Bulbasaur(1));
+        pokemonSalvajes.add(new Squirtle(1));
 
 
     }
@@ -97,7 +98,7 @@ public class Ruta2_Sinnoh_LagoVeraz extends Mapa {
         this.eventsMap = new Evento[altura][anchura];
         this.npcs = new ArrayList<>();
 
-        // teleportMap[3][9] = "Ruta 1";
+        teleportMap[3][9] = "Caverna Veraz";
 
         Entrenador helio = new Entrenador();
         helio.incluirPokemonParaCombatir(0, new Bulbasaur(1));
