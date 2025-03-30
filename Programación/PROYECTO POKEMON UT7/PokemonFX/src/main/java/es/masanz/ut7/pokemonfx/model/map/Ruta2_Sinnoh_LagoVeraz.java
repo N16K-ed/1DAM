@@ -86,7 +86,7 @@ public class Ruta2_Sinnoh_LagoVeraz extends Mapa {
         };
 
         this.inicioX = 45;
-        this.inicioY = 44;
+        this.inicioY = 45;
 
         this.altura = mapaRuta.length;
         this.anchura = mapaRuta[0].length;
