@@ -28,18 +28,18 @@ public class Ataque {
     public String ejecutarAtaque(Pokemon ejecutor, Pokemon destinatario) {
         StringBuilder sb = new StringBuilder();
         String nombrePokemonE = ejecutor.getApodo()!=null ? ejecutor.getApodo() : ejecutor.getClass().getSimpleName();
-        sb.append("["+nombrePokemonE+"] usó ["+nombre+"].");
+        sb.append(nombrePokemonE+" usó "+nombre+".");
         if(cantidad > 0){
             cantidad--;
             if (Math.random() * 100 < precision) {
                 int dano = calcularDano(ejecutor, destinatario, sb);
-                sb.append(" Hace ["+dano+"] puntos de daño.");
+                sb.append(" Hace "+dano+" puntos de daño.");
                 destinatario.recibirAtaque(ejecutor, dano);
             } else {
-                sb.append(" ¡Pero [FALLO] el ataque!");
+                sb.append(" ¡Pero " + nombrePokemonE + " ha fallado el ataque!");
             }
         } else {
-            sb.append(" ¡No quedan PP!");
+            sb.append(" ¡A "+nombrePokemonE+" no le quedan PP para realizar ese movimiento!");
         }
         return sb.toString();
     }
@@ -64,7 +64,7 @@ public class Ataque {
         danioBase *= efectividad;
         // Aplicar golpe critico
         if (esGolpeCritico(ejecutor)) {
-            sb.append("¡ATAQUE CRITICO! ");
+            sb.append("¡Un Golpe Crítico! ");
             danioBase *= 1.5;
         }
         // Aplicar variacion aleatoria
@@ -86,17 +86,17 @@ public class Ataque {
             for (Class<?> interfaceType : interfaces) {
                 if(tipo.esDebilContra(interfaceType.getSimpleName().toUpperCase())){
                     //System.out.println(tipo +" es debil contra "+interfaceType.getSimpleName().toUpperCase());
-                    sb.append("No es muy efectivo... ");
+                    sb.append("No es muy eficaz... ");
                     multiplicador *= 0.5;
                 }
                 if(tipo.esFuerteContra(interfaceType.getSimpleName().toUpperCase())){
                     //System.out.println(tipo +" es fuerte contra "+interfaceType.getSimpleName().toUpperCase());
-                    sb.append("¡Es super efectivo! ");
+                    sb.append("¡Es super eficaz! ");
                     multiplicador *= 2;
                 }
                 if(tipo.esInmuneContra(interfaceType.getSimpleName().toUpperCase())){
                     //System.out.println(tipo +" es inmune contra "+interfaceType.getSimpleName().toUpperCase());
-                    sb.append("Es inmune al ["+tipo+"] ");
+                    sb.append("Es inmune a ataques de tipo "+tipo.toString().toLowerCase()+"...");
                     multiplicador *= 0;
                 }
             }

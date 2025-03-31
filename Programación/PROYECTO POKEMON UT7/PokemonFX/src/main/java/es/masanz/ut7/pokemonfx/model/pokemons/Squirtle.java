@@ -13,12 +13,12 @@ public class Squirtle extends Pokemon implements Agua {
 
     @Override
     public int nivelEvolucion() {
-        return -1;
-    }
+        return 16;
+    }//-1 para q no evoucione.
 
     @Override
     public Pokemon pokemonAEvolucionar() {
-        return null;
+        return new Charmander(this.nivel);
     }
 
     @Override

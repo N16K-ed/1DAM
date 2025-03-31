@@ -13,7 +13,7 @@ public class Charmander extends Pokemon implements Fuego {
 
     @Override
     public int nivelEvolucion() {
-        return 7;
+        return 16;
     }
 
     @Override

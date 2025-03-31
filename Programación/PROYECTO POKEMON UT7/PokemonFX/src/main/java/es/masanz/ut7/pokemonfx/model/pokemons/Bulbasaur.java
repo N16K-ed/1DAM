@@ -13,13 +13,15 @@ public class Bulbasaur extends Pokemon implements Planta {
 
     @Override
     public int nivelEvolucion() {
-        return 6;
+        return 16;
     }
 
     @Override
     public Pokemon pokemonAEvolucionar() {
         // Esto NO MOLA. Tener en cuenta que el apodo y los IV los perdemos si hacemos esto
         Pokemon pokemon = new Charmander(this.nivel);
+        pokemon.setApodo(this.apodo);
+
         return pokemon;
     }
 
