@@ -119,29 +119,10 @@ WHERE
         )
     );
 
--- EJERCICIO 8 (No me sale bien)
-SELECT 
-    COUNT(e.num_empleado) AS 'Número de Empleados'
-FROM 
-    empleados e
-WHERE 
-    e.oficina IN (
-        SELECT o.num_oficina
-        FROM oficinas o
-        WHERE (
-            SELECT SUM(o2.objetivo)
-            FROM oficinas o2
-            WHERE o2.num_oficina = o.num_oficina
-        ) IN (
-            SELECT MIN(suma_objetivos)
-            FROM (
-                SELECT SUM(o3.objetivo) AS suma_objetivos
-                FROM oficinas o3
-                GROUP BY o3.num_oficina
-            ) subquery
-        )
-    );
-
+-- EJERCICIO 8
+select count(*) from empleados join oficinas on empleados.oficina = oficinas.num_oficina
+where oficinas.objetivo in (
+select min(objetivo) from oficinas);
 
 -- EJERCICIO 9
 
