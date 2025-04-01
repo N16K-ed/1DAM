@@ -77,7 +77,7 @@ public class CombateController {
         playerPokemonIV.setSmooth(false);
         playerPokemonIV.setPreserveRatio(true);
 
-        npcPokemonIV = new ImageView(new Image(getClass().getResource(POKEMONS_FRONT_PATH+ npcPokemon.getClass().getSimpleName()+"_RA.png").toExternalForm()));
+        npcPokemonIV = new ImageView(new Image(getClass().getResource(POKEMONS_FRONT_PATH+ npcPokemon.getClass().getSimpleName()+"_AR.png").toExternalForm()));
         npcPokemonIV.setFitWidth(80);
         npcPokemonIV.setFitHeight(80);
         npcPokemonIV.setLayoutX(340);
@@ -564,11 +564,11 @@ public class CombateController {
                             if(selectedPokemon.getHpActual()>0){
                                 int expObtenida = calcularExperienciaObtenida(selectedPokemon, npcPokemon);
                                 String nombrePokemon = selectedPokemon.getApodo()!=null?selectedPokemon.getApodo():selectedPokemon.getClass().getSimpleName();
-                                String msg3 = "["+nombrePokemon+"] obtiene ["+expObtenida+"] puntos de [EXPERIENCIA].";
+                                String msg3 = nombrePokemon+" ha obtenido "+expObtenida+" puntos de experiencia.";
                                 battleText.setText(msg3);
                                 boolean aumentaNivel = selectedPokemon.sumarExperiencia(expObtenida);
                                 if(aumentaNivel) {
-                                    msg3 = msg3 + " Su [NIVEL] ahora es ["+selectedPokemon.getNivel()+"].";
+                                    msg3 = msg3 + " ¡" + nombrePokemon + " ha subido al nivel "+selectedPokemon.getNivel()+"!";
                                 }
                                 battleText.setText(msg3);
                                 Timeline lapsoSubirExp = new Timeline(new KeyFrame(Duration.millis(1500), e3 -> analizarSituacion()));
@@ -593,11 +593,11 @@ public class CombateController {
                         if(selectedPokemon.getHpActual()>0){
                             int expObtenida = calcularExperienciaObtenida(selectedPokemon, npcPokemon);
                             String nombrePokemon = selectedPokemon.getApodo()!=null?selectedPokemon.getApodo():selectedPokemon.getClass().getSimpleName();
-                            String msg3 = "["+nombrePokemon+"] obtiene ["+expObtenida+"] puntos de [EXPERIENCIA].";
+                            String msg3 = nombrePokemon+" ha obtenido "+expObtenida+" puntos de experiencia.";
                             battleText.setText(msg3);
                             boolean aumentaNivel = selectedPokemon.sumarExperiencia(expObtenida);
                             if(aumentaNivel) {
-                                msg3 = msg3 + " Su [NIVEL] ahora es ["+selectedPokemon.getNivel()+"].";
+                                msg3 = msg3 + " ¡" + nombrePokemon + " ha subido al nivel "+selectedPokemon.getNivel()+"!";
                             }
                             battleText.setText(msg3);
                             Timeline lapsoSubirExp = new Timeline(new KeyFrame(Duration.millis(1500), e3 -> analizarSituacion()));
@@ -754,7 +754,7 @@ public class CombateController {
         StackPane pantallaDerrota = new StackPane();
         pantallaDerrota.setStyle("-fx-background-color: black; -fx-opacity: 0.9;");
 
-        Label mensaje = new Label("Oh... Has perdido :(");
+        Label mensaje = new Label("Has sido derrotado...");
         mensaje.setTextFill(Color.WHITE);
         mensaje.setFont(new Font(24));
 
@@ -782,14 +782,14 @@ public class CombateController {
                 pantallaEvolucion.setStyle("-fx-background-color: black; -fx-opacity: 0.9;");
 
                 String nombre = (pokemon.getApodo() != null) ? pokemon.getApodo() : pokemon.getClass().getSimpleName();
-                Label mensaje = new Label("¡Vaya! ¡[" + nombre + "] está EVOLUCIONANDO!");
+                Label mensaje = new Label("¡Vaya! ¡" + nombre + " está evolucionando!");
                 mensaje.setTextFill(Color.WHITE);
                 mensaje.setFont(new Font(24));
 
-                URL resource = getClass().getResource(POKEMONS_FRONT_PATH + pokemon.getClass().getSimpleName() + "_RA.png");
+                URL resource = getClass().getResource(POKEMONS_FRONT_PATH + pokemon.getClass().getSimpleName() + "_AR.png");
                 ImageView pokemonIV = new ImageView(new Image(resource.toString()));
 
-                URL resource2 = getClass().getResource(POKEMONS_FRONT_PATH + evolucionPokemon.getClass().getSimpleName() + "_RA.png");
+                URL resource2 = getClass().getResource(POKEMONS_FRONT_PATH + evolucionPokemon.getClass().getSimpleName() + "_AR.png");
                 ImageView evolucionPokemonIV = new ImageView(new Image(resource2.toString()));
 
                 StackPane spriteContainer = new StackPane(pokemonIV, evolucionPokemonIV);
@@ -819,7 +819,7 @@ public class CombateController {
                 timeline.setOnFinished(e -> {
                     botonContinuar.setVisible(true);
                     availablePokemons[finalI] = evolucionPokemon;
-                    mensaje.setText("¡Enhorabuena! ["+nombre+"] evolucionó en ["+evolucionPokemon.getClass().getSimpleName()+"]");
+                    mensaje.setText("¡Enhorabuena! ¡"+nombre+" ha evolucionado en "+evolucionPokemon.getClass().getSimpleName()+"!");
                 });
 
                 timeline.play();
