@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package es.masanz.ut7.pokemonfx.model.pokemons;
 
 import es.masanz.ut7.pokemonfx.model.base.Ataque;
@@ -57,3 +58,64 @@ public class Squirtle extends Pokemon implements Agua {
     }
 
 }
+=======
+package es.masanz.ut7.pokemonfx.model.pokemons;
+
+import es.masanz.ut7.pokemonfx.model.base.Ataque;
+import es.masanz.ut7.pokemonfx.model.base.Pokemon;
+import es.masanz.ut7.pokemonfx.model.enums.Tipo;
+import es.masanz.ut7.pokemonfx.model.type.Agua;
+
+public class Squirtle extends Pokemon implements Agua {
+
+    public Squirtle(int nivel) {
+        super(nivel);
+    }
+
+    @Override
+    public int nivelEvolucion() {
+        return 16;
+    }//-1 para q no evoucione.
+
+    @Override
+    public Pokemon pokemonAEvolucionar() {
+        Pokemon pokemon = new Wartortle(this.nivel);
+        pokemon.setApodo(this.apodo);
+        pokemon.setIVs(this.getIvs());
+        return pokemon;
+    }
+
+    @Override
+    protected void asignarAtaques() {
+        // Nivel 1: Placaje
+        Ataque placaje = new Ataque("placaje", 35, 95, Tipo.NORMAL, false, 35);
+        asignarAtaque(placaje.getNombre(), placaje);
+
+        // Nivel 7: Burbuja
+        Ataque burbuja = new Ataque("burbuja", 20, 100, Tipo.AGUA, true, 30);
+        asignarAtaque(burbuja.getNombre(), burbuja);
+
+        // Nivel 15: Pistola Agua
+        Ataque pistolaAgua = new Ataque("pistola agua", 40, 90, Tipo.AGUA, true, 20);
+        asignarAtaque(pistolaAgua.getNombre(), pistolaAgua);
+
+        // Nivel 20: Mordisco
+        Ataque mordisco = new Ataque("mordisco", 60, 90, Tipo.SINIESTRO, false, 25);
+        asignarAtaque(mordisco.getNombre(), mordisco);
+
+        // Nivel 31: Hidropulso
+        Ataque hidropulso = new Ataque("hidropulso", 60, 85, Tipo.AGUA, true, 20);
+        asignarAtaque(hidropulso.getNombre(), hidropulso);
+
+        // Nivel 37: Cabezazo
+        Ataque cabezazo = new Ataque("cabezazo", 70, 90, Tipo.NORMAL, false, 15);
+        asignarAtaque(cabezazo.getNombre(), cabezazo);
+
+        // Nivel 43: Hidrobomba
+        Ataque hidrobomba = new Ataque("hidrobomba", 110, 80, Tipo.AGUA, true, 5);
+        asignarAtaque(hidrobomba.getNombre(), hidrobomba);
+
+    }
+
+}
+>>>>>>> 067c080c5e854d987328b2e03df9801a4b453a0e
