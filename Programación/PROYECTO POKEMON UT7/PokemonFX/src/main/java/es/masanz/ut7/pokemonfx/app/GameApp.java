@@ -26,9 +26,9 @@ public class GameApp extends Application {
         //Pokemon en el equipo
 
         //Dar iniciales.
-        jugador.incluirPokemonParaCombatir(0, new Bulbasaur(5));
-        jugador.incluirPokemonParaCombatir(1, new Charmander(5));
-        jugador.incluirPokemonParaCombatir(2, new Squirtle(5));
+        jugador.incluirPokemonParaCombatir(0, new Bulbasaur(16));
+        jugador.incluirPokemonParaCombatir(1, new Charmander(16));
+        jugador.incluirPokemonParaCombatir(2, new Squirtle(16));
 
 
         // Pokemon en el PC

@@ -5,23 +5,19 @@ import es.masanz.ut7.pokemonfx.model.base.Pokemon;
 import es.masanz.ut7.pokemonfx.model.enums.Tipo;
 import es.masanz.ut7.pokemonfx.model.type.Agua;
 
-public class Squirtle extends Pokemon implements Agua {
-
-    public Squirtle(int nivel) {
+public class Wartortle extends Pokemon implements Agua {
+    public Wartortle(int nivel){
         super(nivel);
     }
 
     @Override
     public int nivelEvolucion() {
-        return 16;
-    }//-1 para q no evoucione.
+        return -1;
+    }
 
     @Override
     public Pokemon pokemonAEvolucionar() {
-        Pokemon pokemon = new Wartortle(this.nivel);
-        pokemon.setApodo(this.apodo);
-        pokemon.setIVs(this.getIvs());
-        return pokemon;
+        return null;
     }
 
     @Override
@@ -55,5 +51,4 @@ public class Squirtle extends Pokemon implements Agua {
         asignarAtaque(hidrobomba.getNombre(), hidrobomba);
 
     }
-
 }
