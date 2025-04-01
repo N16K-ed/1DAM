@@ -2,6 +2,7 @@ package es.masanz.ut7.pokemonfx.model.base;
 
 import es.masanz.ut7.pokemonfx.model.enums.Stats;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.UUID;
 
@@ -209,5 +210,22 @@ public abstract class Pokemon implements Cloneable {
         pokemon.defensaEspecialIV = (int) (Math.random() * 32);
     }
 
-
+    public HashMap<String,Integer> getIvs(){
+        HashMap<String, Integer> listaIvs = new HashMap<>();
+        listaIvs.put("PS",this.hpIV);
+        listaIvs.put("ATAQUE",this.ataqueIV);
+        listaIvs.put("DEFENSA",this.defensaIV);
+        listaIvs.put("ATAQUE ESPECIAL",this.ataqueEspecialIV);
+        listaIvs.put("DEFENSA ESPECIAL",this.defensaEspecialIV);
+        listaIvs.put("VELOCIDAD",this.velocidadIV);
+        return listaIvs;
+    }
+    public void setIVs(HashMap<String, Integer> ivs){
+        this.hpIV = ivs.get("PS");
+        this.ataqueIV = ivs.get("ATAQUE");
+        this.defensaIV = ivs.get("DEFENSA");
+        this.ataqueEspecialIV = ivs.get("ATAQUE ESPECIAL");
+        this.defensaEspecialIV = ivs.get("DEFENSA ESPECIAL");
+        this.velocidadIV = ivs.get("VELOCIDAD");
+    }
 }
