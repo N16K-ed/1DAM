@@ -21,6 +21,7 @@ public class Squirtle extends Pokemon implements Agua {
         Pokemon pokemon = new Wartortle(this.nivel);
         pokemon.setApodo(this.apodo);
         pokemon.setIVs(this.getIvs());
+        pokemon.setHpActual(pokemon.getMaxHP());
         return pokemon;
     }
 

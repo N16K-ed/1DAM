@@ -21,6 +21,7 @@ public class Charmander extends Pokemon implements Fuego {
         Pokemon pokemon = new Charmeleon(this.nivel);
         pokemon.setApodo(this.apodo);
         pokemon.setIVs(this.getIvs());
+        pokemon.setHpActual(pokemon.getMaxHP());
         return pokemon;
     }
 
