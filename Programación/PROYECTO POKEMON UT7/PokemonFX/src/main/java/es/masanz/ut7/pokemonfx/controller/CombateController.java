@@ -77,7 +77,7 @@ public class CombateController {
         playerPokemonIV.setSmooth(false);
         playerPokemonIV.setPreserveRatio(true);
 
-        npcPokemonIV = new ImageView(new Image(getClass().getResource(POKEMONS_FRONT_PATH+ npcPokemon.getClass().getSimpleName()+"_AR.png").toExternalForm()));
+        npcPokemonIV = new ImageView(new Image(getClass().getResource(POKEMONS_FRONT_PATH+ npcPokemon.getClass().getSimpleName()+"_RA.png").toExternalForm()));
         npcPokemonIV.setFitWidth(80);
         npcPokemonIV.setFitHeight(80);
         npcPokemonIV.setLayoutX(340);
@@ -786,10 +786,10 @@ public class CombateController {
                 mensaje.setTextFill(Color.WHITE);
                 mensaje.setFont(new Font(24));
 
-                URL resource = getClass().getResource(POKEMONS_FRONT_PATH + pokemon.getClass().getSimpleName() + "_AR.png");
+                URL resource = getClass().getResource(POKEMONS_FRONT_PATH + pokemon.getClass().getSimpleName() + "_RA.png");
                 ImageView pokemonIV = new ImageView(new Image(resource.toString()));
 
-                URL resource2 = getClass().getResource(POKEMONS_FRONT_PATH + evolucionPokemon.getClass().getSimpleName() + "_AR.png");
+                URL resource2 = getClass().getResource(POKEMONS_FRONT_PATH + evolucionPokemon.getClass().getSimpleName() + "_RA.png");
                 ImageView evolucionPokemonIV = new ImageView(new Image(resource2.toString()));
 
                 StackPane spriteContainer = new StackPane(pokemonIV, evolucionPokemonIV);

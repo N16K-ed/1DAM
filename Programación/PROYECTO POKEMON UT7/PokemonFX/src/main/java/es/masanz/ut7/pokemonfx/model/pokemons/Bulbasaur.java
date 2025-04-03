@@ -21,6 +21,7 @@ public class Bulbasaur extends Pokemon implements Planta {
         Pokemon pokemon = new Ivysaur(this.nivel);
         pokemon.setApodo(this.apodo);
         pokemon.setIVs(this.getIvs());
+        pokemon.setHpActual(pokemon.getMaxHP());
         return pokemon;
     }
 
