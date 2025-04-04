@@ -13,7 +13,7 @@ import static es.masanz.ut7.pokemonfx.util.Configuration.*;
 
 public class EventoMensaje implements Evento {
 
-        private String imagenEvento = "/pruebas/cartel_transparente.png";
+        private String imagenEvento = "/pruebas/cartel_transaparente.png";
         private VBox root = new VBox();
         private Label label;
         private int step = 0; // Para controlar los diferentes estados del mensaje
@@ -55,6 +55,7 @@ public class EventoMensaje implements Evento {
                         case 2:
                                 // Eliminar el texto y cerrar la caja de texto
                                 Platform.runLater(() -> {
+                                        imagenEvento ="";
                                         ((Pane) root.getParent()).getChildren().remove(root);
                                         MapController.setBlockGame(false);
                                 });

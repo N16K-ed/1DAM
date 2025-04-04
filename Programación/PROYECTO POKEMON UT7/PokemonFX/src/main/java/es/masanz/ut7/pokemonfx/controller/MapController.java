@@ -325,7 +325,7 @@ public class MapController {
                             root.getChildren().add(((EventoMensaje) evento).getRoot());
                         });
                         eventsMap[tileY][tileX] = null;
-
+                        preRenderMap(); //Actualizar gráficos;
 
                     } else {
                         eventsMap[tileY][tileX] = null;
