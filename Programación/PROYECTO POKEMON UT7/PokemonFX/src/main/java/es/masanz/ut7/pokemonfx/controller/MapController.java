@@ -5,6 +5,7 @@ import es.masanz.ut7.pokemonfx.model.base.Evento;
 import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
 import es.masanz.ut7.pokemonfx.model.enums.TileType;
 import es.masanz.ut7.pokemonfx.model.enums.TrainerType;
+import es.masanz.ut7.pokemonfx.model.event.EventoMensaje;
 import es.masanz.ut7.pokemonfx.model.fx.NPC;
 import javafx.animation.AnimationTimer;
 import javafx.animation.KeyFrame;
@@ -115,6 +116,7 @@ public class MapController {
         Canvas canvas = new Canvas(VIEW_WIDTH, VIEW_HEIGHT);
         gc = canvas.getGraphicsContext2D();
         gc.setImageSmoothing(false);
+
         generateMap();
         preRenderMap();
         root = new StackPane(canvas);
@@ -191,6 +193,7 @@ public class MapController {
     }
 
     private static void updateMovement() {
+
         if (!moving && !blockGame) {
             checkNPCVision();
             if(!blockGame){
@@ -210,8 +213,8 @@ public class MapController {
                 playerX += (dx / distance) * MOVE_SPEED;
                 playerY += (dy / distance) * MOVE_SPEED;
                 int spriteTransitionCountIni = spriteTransitionCount;
-                spriteTransitionCount = (spriteTransitionCount+1) % VELOCIDAD_CAMBIO_SPRITES;
-                if(spriteTransitionCountIni>spriteTransitionCount){
+                spriteTransitionCount = (spriteTransitionCount + 1) % VELOCIDAD_CAMBIO_SPRITES;
+                if (spriteTransitionCountIni > spriteTransitionCount) {
                     animationFrame = (animationFrame + 1) % 6;
                 }
             } else {
@@ -309,29 +312,40 @@ public class MapController {
                 }
 
 
-                if(teleportMap[tileY][tileX]!=null){
+                if (teleportMap[tileY][tileX] != null) {
                     reload(teleportMap[tileY][tileX]);
                 }
-                if(eventsMap[tileY][tileX]!=null){
+                if (eventsMap[tileY][tileX] != null) {
+                    Evento evento = eventsMap[tileY][tileX];
                     eventsMap[tileY][tileX].aplicarEfecto();
-                    eventsMap[tileY][tileX] = null;
-                    preRenderMap();
-                    blockGame = true;
-                    pressedKeys = new HashSet<>();
-                    Rectangle overlay = new Rectangle(VIEW_WIDTH, VIEW_HEIGHT, Color.BLACK);
-                    overlay.setOpacity(0);
-                    root.getChildren().add(overlay);
-                    Timeline fadeAnimation = new Timeline(
-                            new KeyFrame(Duration.seconds(0.1), new KeyValue(overlay.opacityProperty(), 1.0)),
-                            new KeyFrame(Duration.seconds(0.3), new KeyValue(overlay.opacityProperty(), 0.0))
-                    );
-                    fadeAnimation.setCycleCount(1);
-                    fadeAnimation.setOnFinished(event -> {
-                        blockGame = false;
-                        root.getChildren().remove(overlay);
-                    });
-                    fadeAnimation.play();
 
+                    if (evento instanceof EventoMensaje) {
+                        blockGame = true;
+                        Platform.runLater(() -> {
+                            root.getChildren().add(((EventoMensaje) evento).getRoot());
+                        });
+                        eventsMap[tileY][tileX] = null;
+
+
+                    } else {
+                        eventsMap[tileY][tileX] = null;
+                        preRenderMap();
+                        blockGame = true;
+                        pressedKeys = new HashSet<>();
+                        Rectangle overlay = new Rectangle(VIEW_WIDTH, VIEW_HEIGHT, Color.BLACK);
+                        overlay.setOpacity(0);
+                        root.getChildren().add(overlay);
+                        Timeline fadeAnimation = new Timeline(
+                                new KeyFrame(Duration.seconds(0.1), new KeyValue(overlay.opacityProperty(), 1.0)),
+                                new KeyFrame(Duration.seconds(0.3), new KeyValue(overlay.opacityProperty(), 0.0))
+                        );
+                        fadeAnimation.setCycleCount(1);
+                        fadeAnimation.setOnFinished(event -> {
+                            blockGame = false;
+                            root.getChildren().remove(overlay);
+                        });
+                        fadeAnimation.play();
+                    }
                 }
             }
         }
@@ -552,6 +566,10 @@ public class MapController {
                 iterator.remove();
             }
         }
+    }
+
+    public static void setBlockGame(boolean blockGame) {
+        MapController.blockGame = blockGame;
     }
 
 }
