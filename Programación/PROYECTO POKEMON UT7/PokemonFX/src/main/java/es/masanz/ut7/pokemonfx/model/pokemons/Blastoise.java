@@ -5,30 +5,26 @@ import es.masanz.ut7.pokemonfx.model.base.Pokemon;
 import es.masanz.ut7.pokemonfx.model.enums.Tipo;
 import es.masanz.ut7.pokemonfx.model.type.Agua;
 
-public class Wartortle extends Pokemon implements Agua {
-    public Wartortle(int nivel){
+public class Blastoise extends Pokemon implements Agua {
+    public Blastoise(int nivel){
         super(nivel);
     }
 
     @Override
     public int nivelEvolucion() {
-        return 36;
+        return -1;
     }
 
     @Override
     public Pokemon pokemonAEvolucionar() {
-        Pokemon pokemon = new Blastoise(this.nivel);
-        pokemon.setApodo(this.apodo);
-        pokemon.setIVs(this.getIvs());
-        pokemon.setHpActual(pokemon.getMaxHP());
-        return pokemon;
+        return null;
     }
 
     @Override
     protected void asignarAtaques() {
         // Nivel 1: Placaje
-        Ataque placaje = new Ataque("placaje", 35, 95, Tipo.NORMAL, false, 35);
-        asignarAtaque(placaje.getNombre(), placaje);
+        Ataque focoResplandor = new Ataque("Foco resplandor", 80, 100, Tipo.ACERO, true, 10);
+        asignarAtaque(focoResplandor.getNombre(), focoResplandor);
 
         // Nivel 7: Burbuja
         Ataque burbuja = new Ataque("burbuja", 20, 100, Tipo.AGUA, true, 30);

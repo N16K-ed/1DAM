@@ -51,7 +51,7 @@ public class CombateController {
     private Pokemon[] availablePokemons;
     private String ruta;
 
-    public void load(Stage primaryStage, Scene previousStage, NPC npc, String ruta) {
+    public void load(Stage primaryStage, Scene previousStage, NPC npc, String ruta) throws CloneNotSupportedException {
         this.primaryStage = primaryStage;
         this.previousStage = previousStage;
         this.oponentNPC = npc;
@@ -665,7 +665,11 @@ public class CombateController {
                         TranslateTransition shake = new TranslateTransition(Duration.millis(VELOCIDAD_ANIMACIONES/2), npcPokemonIV);
                         shake.setByX(1000);
                         shake.setOnFinished(e -> {
-                            load(primaryStage, previousStage, oponentNPC, ruta);
+                            try {
+                                load(primaryStage, previousStage, oponentNPC, ruta);
+                            } catch (CloneNotSupportedException ex) {
+                                throw new RuntimeException(ex);
+                            }
                         });
                         shake.play();
                     }
@@ -858,7 +862,7 @@ public class CombateController {
         return null;
     }
 
-    private void loadAvailablePokemons() {
+    private void loadAvailablePokemons() throws CloneNotSupportedException {
         if(selectedPokemon==null || selectedPokemon.getHpActual()<=0){
             availablePokemons = GameApp.jugador.getPokemonesCombate();
             for (int i = 0; i < 6; i++) {
