@@ -14,6 +14,8 @@ public enum Stats {
     BLASTOISE("009", 79, 83, 100, 78, 85, 105, 239),
     BIDOOF("399", 59, 45, 40, 31, 35, 40, 50),
     BIBAREL("400", 79, 85, 60, 71, 55, 60, 144),
+    BRONZOR("436", 57, 24, 86, 23, 24, 86, 60),
+    BRONZONG("437", 67, 89, 116, 33, 79, 116, 188),
     ;
 
     public final String numPokedex;

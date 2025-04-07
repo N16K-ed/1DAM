@@ -24,18 +24,18 @@ public class GameApp extends Application {
         //Pokemon en el equipo
 
         //Dar iniciales.
-        jugador.incluirPokemonParaCombatir(0, new Bulbasaur(16));
-        jugador.incluirPokemonParaCombatir(1, new Charmander(16));
-        jugador.incluirPokemonParaCombatir(2, new Squirtle(16));
-        jugador.incluirPokemonParaCombatir(3, new Ivysaur(36));
-        jugador.incluirPokemonParaCombatir(4, new Charmeleon(36));
-        jugador.incluirPokemonParaCombatir(5, new Wartortle(36));
 
-
+        jugador.incluirPokemonParaCombatir(0,new Bidoof(25));
+        jugador.incluirPokemonParaCombatir(1,new Bronzor(33));
+        jugador.incluirPokemonParaCombatir(2,new Bronzong(36));
         // Pokemon en el PC
-        jugador.getPokemonesCapturados().add(new Squirtle(25));
-        jugador.getPokemonesCapturados().add(new Charmander(35));
-        jugador.getPokemonesCapturados().add(new Bidoof(25));
+        jugador.getPokemonesCapturados().add(new Bulbasaur(16));
+        jugador.getPokemonesCapturados().add(new Charmander(16));
+        jugador.getPokemonesCapturados().add(new Squirtle(16));
+        jugador.getPokemonesCapturados().add(new Ivysaur(36));
+        jugador.getPokemonesCapturados().add(new Charmeleon(36));
+        jugador.getPokemonesCapturados().add(new Wartortle(36));
+
         launch(args);
     }
 }
