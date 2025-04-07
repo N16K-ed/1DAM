@@ -1,23 +1,30 @@
 package org.example;
 
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 public class TrabajadorDAO {
-    private static final SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+    private static final SessionFactory sessionFactory;
+
+    static {
+        final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
+                .configure() // Configura desde hibernate.cfg.xml
+                .build();
+        try {
+            sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
+        } catch (Exception e) {
+            StandardServiceRegistryBuilder.destroy(registry);
+            throw new ExceptionInInitializerError("Initial SessionFactory creation failed" + e);
+        }
+    }
 
     public static void guardarUsuario(Trabajador trabajador) {
-        Session session = sessionFactory.openSession();
-        try {
-            session.beginTransaction();
-            session.persist(trabajador);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-            session.getTransaction().rollback();
-        } finally {
-            session.close();
-        }
+        var session = sessionFactory.openSession();
+        var transaction = session.beginTransaction();
+        session.merge(trabajador); // Usar merge en lugar de persist
+        transaction.commit();
+        session.close();
     }
 }

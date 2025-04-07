@@ -1,6 +1,13 @@
 package org.example;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "trabajadores")
 public class Trabajador {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String nombre;
@@ -8,8 +15,9 @@ public class Trabajador {
     private String contrato;
     private String departamento;
 
-    public Trabajador(int id, String nombre, int sueldo, String contrato, String departamento) {
-        this.id = id;
+    public Trabajador(){}
+
+    public Trabajador(String nombre, int sueldo, String contrato, String departamento) {
         this.nombre = nombre;
         this.sueldo = sueldo;
         this.contrato = contrato;

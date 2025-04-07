@@ -30,16 +30,18 @@ public class Main {
         app.post("/submit", ctx -> {
             Map<String, Object> model = new HashMap<>();
 
-            // Obtener datos del formulario
-           /*TODO
-                Obtener datos del formulario
-            */
 
+            String nombre = ctx.formParam("nombre");
+            String departamento = ctx.formParam("departamento");
+            String contrato = ctx.formParam("contrato");
+            int sueldo = Integer.parseInt(ctx.formParam("sueldo"));
 
-            TrabajadorDAO.guardarUsuario(??????);
+            Trabajador nuevo = new Trabajador(nombre,sueldo,departamento,contrato);
 
-            // Poner los datos en el modelo para la plantilla de resultados
-            model.put("??????", ??????);
+            TrabajadorDAO.guardarUsuario(nuevo);
+
+            model.put("trabajador", nuevo);
+
 
             ctx.render("result.ftl", model);
         });
