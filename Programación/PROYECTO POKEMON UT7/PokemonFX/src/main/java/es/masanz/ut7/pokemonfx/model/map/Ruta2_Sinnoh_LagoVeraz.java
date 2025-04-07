@@ -7,6 +7,8 @@ import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
 import es.masanz.ut7.pokemonfx.model.enums.TileType;
 import es.masanz.ut7.pokemonfx.model.event.EventoMensaje;
 import es.masanz.ut7.pokemonfx.model.fx.NPC;
+import es.masanz.ut7.pokemonfx.model.pokemons.Bibarel;
+import es.masanz.ut7.pokemonfx.model.pokemons.Bidoof;
 import es.masanz.ut7.pokemonfx.model.pokemons.Bulbasaur;
 import es.masanz.ut7.pokemonfx.model.pokemons.Squirtle;
 
@@ -21,9 +23,11 @@ public class Ruta2_Sinnoh_LagoVeraz extends Mapa {
     @Override
     public void cargarPokemonSalvajes(){
         pokemonSalvajes = new ArrayList<>();
-        pokemonSalvajes.add(new Squirtle(1));
-
-
+        pokemonSalvajes.add(new Squirtle(14));
+        pokemonSalvajes.add(new Bidoof(14));
+        pokemonSalvajes.add(new Bidoof(15));
+        pokemonSalvajes.add(new Bibarel(15));
+        pokemonSalvajes.add(new Bibarel(16));
     }
 
     @Override
@@ -102,7 +106,7 @@ public class Ruta2_Sinnoh_LagoVeraz extends Mapa {
         teleportMap[3][9] = "Caverna Veraz";
 
         Entrenador helio = new Entrenador();
-        helio.incluirPokemonParaCombatir(0, new Bulbasaur(1));
+        helio.incluirPokemonParaCombatir(0, new Bulbasaur(35));
 
         npcs.add(new NPC(2, 1, ABAJO, helio));
 

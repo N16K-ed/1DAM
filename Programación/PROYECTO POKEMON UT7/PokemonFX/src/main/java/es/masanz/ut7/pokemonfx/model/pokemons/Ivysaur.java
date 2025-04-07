@@ -19,7 +19,7 @@ public class Ivysaur extends Pokemon implements Planta, Veneno{
 
         @Override
         public int nivelEvolucion() {
-            return 36;
+            return 32;
         }
 
         @Override
