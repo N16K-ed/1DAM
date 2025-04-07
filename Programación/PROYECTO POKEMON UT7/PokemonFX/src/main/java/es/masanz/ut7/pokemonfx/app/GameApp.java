@@ -35,6 +35,7 @@ public class GameApp extends Application {
         // Pokemon en el PC
         jugador.getPokemonesCapturados().add(new Squirtle(25));
         jugador.getPokemonesCapturados().add(new Charmander(35));
+        jugador.getPokemonesCapturados().add(new Bidoof(25));
         launch(args);
     }
 }

@@ -12,6 +12,8 @@ public enum Stats {
     SQUIRTLE("007", 44, 48, 65, 43, 50, 64, 66),
     WARTORTLE("008",59,63,80,58,65,80,142),
     BLASTOISE("009", 79, 83, 100, 78, 85, 105, 239),
+    BIDOOF("399", 59, 45, 40, 31, 35, 40, 50),
+    BIBAREL("400", 79, 85, 60, 71, 55, 60, 144),
     ;
 
     public final String numPokedex;
