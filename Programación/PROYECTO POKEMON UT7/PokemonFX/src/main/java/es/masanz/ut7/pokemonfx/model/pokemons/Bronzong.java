@@ -24,20 +24,20 @@ public class Bronzong extends Pokemon implements Acero, Psiquico {
 
     @Override
     protected void asignarAtaques() {
-        Ataque cabezaHierro = new Ataque("Cabeza de Hierro", 80, 100, Tipo.ACERO, false, 10);
+        Ataque cabezaHierro = new Ataque("Cabezahierro", 80, 100, Tipo.ACERO, false, 10,1);
         asignarAtaque(cabezaHierro.getNombre(), cabezaHierro);
 
-        Ataque Psiquico = new Ataque("Psíquico", 90, 100, Tipo.PSIQUICO, true, 15);
+        Ataque Psiquico = new Ataque("Psíquico", 90, 100, Tipo.PSIQUICO, true, 15,1);
         asignarAtaque(Psiquico.getNombre(), Psiquico);
 
 
-        Ataque bofetonLodo = new Ataque("Bofetón Lodo", 20, 100, Tipo.TIERRA, true, 10);
+        Ataque bofetonLodo = new Ataque("Bofetón Lodo", 20, 100, Tipo.TIERRA, true, 10,1);
         asignarAtaque(bofetonLodo.getNombre(), bofetonLodo);
 
-        Ataque focoresplandor = new Ataque("Foco Resplandor", 80, 100, Tipo.ACERO, true, 10);
+        Ataque focoresplandor = new Ataque("Foco Resplandor", 80, 100, Tipo.ACERO, true, 10,1);
         asignarAtaque(focoresplandor.getNombre(), focoresplandor);
 
-        Ataque psicorrayo = new Ataque("Psicorrayo", 60, 100, Tipo.PSIQUICO, true, 15);
+        Ataque psicorrayo = new Ataque("Psicorrayo", 60, 100, Tipo.PSIQUICO, true, 15,1);
         asignarAtaque(psicorrayo.getNombre(), psicorrayo);
     }
 

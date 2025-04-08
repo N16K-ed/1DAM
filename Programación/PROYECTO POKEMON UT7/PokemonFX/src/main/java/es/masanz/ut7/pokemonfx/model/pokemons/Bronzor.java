@@ -28,17 +28,20 @@ public class Bronzor extends Pokemon implements Acero, Psiquico {
 
     @Override
     protected void asignarAtaques() {
-        Ataque cabezaHierro = new Ataque("Cabeza de Hierro", 80, 100, Tipo.ACERO, false, 10);
+        Ataque cabezaHierro = new Ataque("Cabeza de Hierro", 80, 100, Tipo.ACERO, false, 10,1);
         asignarAtaque(cabezaHierro.getNombre(), cabezaHierro);
 
-        Ataque psicorrayo = new Ataque("Psicorrayo", 60, 100, Tipo.PSIQUICO, true, 15);
+        Ataque psicorrayo = new Ataque("Psicorrayo", 60, 100, Tipo.PSIQUICO, true, 15,1);
         asignarAtaque(psicorrayo.getNombre(), psicorrayo);
 
-        Ataque bofetonLodo = new Ataque("Bofetón Lodo", 20, 100, Tipo.TIERRA, true, 10);
-        asignarAtaque(bofetonLodo.getNombre(), bofetonLodo);
+        Ataque bombasonica = new Ataque("Bomba Sónica", 0, 100, Tipo.NORMAL, false, 20,1, 20);
+        asignarAtaque(bombasonica.getNombre(), bombasonica);
 
-        Ataque focoresplandor = new Ataque("Foco Resplandor", 80, 100, Tipo.ACERO, true, 10);
+        Ataque focoresplandor = new Ataque("Foco Resplandor", 80, 100, Tipo.ACERO, true, 10,1);
         asignarAtaque(focoresplandor.getNombre(), focoresplandor);
+
+        Ataque bofetonLodo = new Ataque("Bofetón Lodo", 20, 100, Tipo.TIERRA, true, 10,1);
+        asignarAtaque(bofetonLodo.getNombre(), bofetonLodo);
     }
 
 }

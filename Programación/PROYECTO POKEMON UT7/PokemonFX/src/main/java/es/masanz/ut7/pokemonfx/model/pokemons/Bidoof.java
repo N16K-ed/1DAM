@@ -27,13 +27,13 @@ public class Bidoof extends Pokemon implements Normal {
 
     @Override
     protected void asignarAtaques() {
-        Ataque aranazo = new Ataque("Arañazo", 40, 100, Tipo.NORMAL, false, 35);
+        Ataque aranazo = new Ataque("Arañazo", 40, 100, Tipo.NORMAL, false, 35,1);
         asignarAtaque(aranazo.getNombre(), aranazo);
 
-        Ataque corte = new Ataque("Corte", 50, 95, Tipo.NORMAL, false, 30);
+        Ataque corte = new Ataque("Corte", 50, 95, Tipo.NORMAL, false, 30,1);
         asignarAtaque(corte.getNombre(), corte);
 
-        Ataque bofetonLodo = new Ataque("Bofetón Lodo", 20, 100, Tipo.TIERRA, true, 10);
+        Ataque bofetonLodo = new Ataque("Bofetón Lodo", 20, 100, Tipo.TIERRA, true, 10,1);
         asignarAtaque(bofetonLodo.getNombre(), bofetonLodo);
     }
 

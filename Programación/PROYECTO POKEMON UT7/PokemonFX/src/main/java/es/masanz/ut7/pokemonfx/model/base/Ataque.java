@@ -13,8 +13,9 @@ public class Ataque {
     protected int pp;
     protected int cantidad;
     protected int prioridad;
+    protected int danofijo;
 
-    public Ataque(String nombre, int dmgBase, int precision, Tipo tipo, boolean esEspecial, int cantidad) {
+    public Ataque(String nombre, int dmgBase, int precision, Tipo tipo, boolean esEspecial, int cantidad, int prioridad) {
         this.nombre = nombre;
         this.dmgBase = dmgBase;
         this.precision = precision;
@@ -22,7 +23,18 @@ public class Ataque {
         this.esEspecial = esEspecial;
         this.pp = cantidad;
         this.cantidad = cantidad;
-        this.prioridad = 1;
+        this.prioridad = prioridad;
+    }
+    public Ataque(String nombre, int dmgBase, int precision, Tipo tipo, boolean esEspecial, int cantidad,int prioridad, int danofijo) {
+        this.nombre = nombre;
+        this.dmgBase = dmgBase;
+        this.precision = precision;
+        this.tipo = tipo;
+        this.esEspecial = esEspecial;
+        this.pp = cantidad;
+        this.cantidad = cantidad;
+        this.prioridad = prioridad;
+        this.danofijo = danofijo;
     }
 
     public String ejecutarAtaque(Pokemon ejecutor, Pokemon destinatario) {
@@ -48,7 +60,9 @@ public class Ataque {
     protected int calcularDano(Pokemon ejecutor, Pokemon objetivo, StringBuilder sb) {
         int ataque = esEspecial ? ejecutor.getAtaqueEspecial() : ejecutor.getAtaque();
         int defensa = esEspecial ? objetivo.getDefensaEspecial() : objetivo.getDefensa();
-
+        if(this.dmgBase == 0){
+            return this.danofijo;
+        }
         double danioBase = (((2.0 * ejecutor.getNivel() + 10) / 250.0) * (ataque / (double) defensa) * dmgBase + 2);
         // Aplicar STAB, es decir, el pokemon que ejecuta el ataque y el propio ataque son del mismo tipo
         Class<?>[] interfaces = ejecutor.getClass().getInterfaces();

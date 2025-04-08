@@ -28,16 +28,16 @@ public class Charmander extends Pokemon implements Fuego {
     @Override
     protected void asignarAtaques() {
 
-        Ataque aranazo = new Ataque("arañazo", 40, 100, Tipo.NORMAL, false, 35);
+        Ataque aranazo = new Ataque("Arañazo", 40, 100, Tipo.NORMAL, false, 35,1);
         asignarAtaque(aranazo.getNombre(), aranazo);
 
-        Ataque ascuas = new Ataque("ascuas", 40, 100, Tipo.FUEGO, true, 25);
+        Ataque ascuas = new Ataque("Ascuas", 40, 100, Tipo.FUEGO, true, 25,1);
         asignarAtaque(ascuas.getNombre(), ascuas);
 
-        Ataque lanzallamas = new Ataque("lanzallamas", 95, 100, Tipo.FUEGO, true, 10);
+        Ataque lanzallamas = new Ataque("Lanzallamas", 95, 100, Tipo.FUEGO, true, 10,1);
         asignarAtaque(lanzallamas.getNombre(), lanzallamas);
 
-        Ataque cuchillada = new Ataque("cuchillada", 70, 100, Tipo.NORMAL, false, 20);
+        Ataque cuchillada = new Ataque("Cuchillada", 70, 100, Tipo.NORMAL, false, 20,1);
         asignarAtaque(cuchillada.getNombre(), cuchillada);
 
     }

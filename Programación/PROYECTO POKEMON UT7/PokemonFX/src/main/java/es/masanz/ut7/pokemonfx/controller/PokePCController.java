@@ -278,7 +278,11 @@ public class PokePCController {
                 atackGrid.add(new Label("Tipo:"), 0, 0);
                 atackGrid.add(new Label(String.valueOf(ataque.getTipo())), 1, 0);
                 atackGrid.add(new Label("Daño:"), 0, 1);
-                atackGrid.add(new Label(String.valueOf(ataque.getDmgBase())), 1, 1);
+                if (ataque.getDmgBase() == 0){
+                    atackGrid.add(new Label("-"), 1, 1);
+                }else {
+                    atackGrid.add(new Label(String.valueOf(ataque.getDmgBase())), 1, 1);
+                }
                 atackGrid.add(new Label("Precisión:"), 0, 2);
                 atackGrid.add(new Label(String.valueOf(ataque.getPrecision())), 1, 2);
                 atackGrid.add(new Label("Es especial:"), 0, 3);

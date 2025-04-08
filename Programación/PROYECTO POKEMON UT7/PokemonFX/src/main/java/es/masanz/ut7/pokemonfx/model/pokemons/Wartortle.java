@@ -27,31 +27,31 @@ public class Wartortle extends Pokemon implements Agua {
     @Override
     protected void asignarAtaques() {
         // Nivel 1: Placaje
-        Ataque placaje = new Ataque("placaje", 35, 95, Tipo.NORMAL, false, 35);
+        Ataque placaje = new Ataque("Placaje", 35, 95, Tipo.NORMAL, false, 35,1);
         asignarAtaque(placaje.getNombre(), placaje);
 
         // Nivel 7: Burbuja
-        Ataque burbuja = new Ataque("burbuja", 20, 100, Tipo.AGUA, true, 30);
+        Ataque burbuja = new Ataque("Burbuja", 20, 100, Tipo.AGUA, true, 30,1);
         asignarAtaque(burbuja.getNombre(), burbuja);
 
         // Nivel 15: Pistola Agua
-        Ataque pistolaAgua = new Ataque("pistola agua", 40, 90, Tipo.AGUA, true, 20);
+        Ataque pistolaAgua = new Ataque("Pistola agua", 40, 90, Tipo.AGUA, true, 20,1);
         asignarAtaque(pistolaAgua.getNombre(), pistolaAgua);
 
         // Nivel 20: Mordisco
-        Ataque mordisco = new Ataque("mordisco", 60, 90, Tipo.SINIESTRO, false, 25);
+        Ataque mordisco = new Ataque("Mordisco", 60, 90, Tipo.SINIESTRO, false, 25,1);
         asignarAtaque(mordisco.getNombre(), mordisco);
 
         // Nivel 31: Hidropulso
-        Ataque hidropulso = new Ataque("hidropulso", 60, 85, Tipo.AGUA, true, 20);
+        Ataque hidropulso = new Ataque("Hidropulso", 60, 85, Tipo.AGUA, true, 20,1);
         asignarAtaque(hidropulso.getNombre(), hidropulso);
 
         // Nivel 37: Cabezazo
-        Ataque cabezazo = new Ataque("cabezazo", 70, 90, Tipo.NORMAL, false, 15);
+        Ataque cabezazo = new Ataque("Cabezazo", 70, 90, Tipo.NORMAL, false, 15,1);
         asignarAtaque(cabezazo.getNombre(), cabezazo);
 
         // Nivel 43: Hidrobomba
-        Ataque hidrobomba = new Ataque("hidrobomba", 110, 80, Tipo.AGUA, true, 5);
+        Ataque hidrobomba = new Ataque("Hidrobomba", 110, 80, Tipo.AGUA, true, 5,1);
         asignarAtaque(hidrobomba.getNombre(), hidrobomba);
 
     }
