@@ -20,8 +20,6 @@ public class EventoMensaje implements Evento {
 
         @Override
         public void aplicarEfecto() {
-
-
                 // Crear el Label para mostrar el primer mensaje
                 label = new Label("Has encontrado una nota: Haz click para continuar hablando con una persona.");
                 label.setFont(Font.font("Arial", FontWeight.BOLD, 12));
@@ -30,8 +28,8 @@ public class EventoMensaje implements Evento {
                 // Configurar el VBox para que ocupe toda la pantalla a lo ancho y un quinto a lo alto
                 root.setPrefWidth(VIEW_WIDTH);
                 root.setMaxWidth(Double.MAX_VALUE);
-                root.setPrefHeight(VIEW_HEIGHT / 5);
-                root.setMaxHeight(VIEW_HEIGHT / 5);
+                root.setPrefHeight(VIEW_HEIGHT / 4);
+                root.setMaxHeight(VIEW_HEIGHT / 4);
                 root.setStyle("-fx-background-color: white; -fx-alignment: center;");
 
                 VBox.setVgrow(root, Priority.ALWAYS);
