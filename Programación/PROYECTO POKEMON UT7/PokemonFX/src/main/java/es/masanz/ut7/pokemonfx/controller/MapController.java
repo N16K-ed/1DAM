@@ -12,6 +12,7 @@ import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -22,6 +23,7 @@ import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
@@ -322,6 +324,8 @@ public class MapController {
                     if (evento instanceof EventoMensaje) {
                         blockGame = true;
                         Platform.runLater(() -> {
+                            VBox eventoRoot = ((EventoMensaje) evento).getRoot();
+                            StackPane.setAlignment(eventoRoot, Pos.BOTTOM_CENTER);
                             root.getChildren().add(((EventoMensaje) evento).getRoot());
                         });
                         eventsMap[tileY][tileX] = null;
