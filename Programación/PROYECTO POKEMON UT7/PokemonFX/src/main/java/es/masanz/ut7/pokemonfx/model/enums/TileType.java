@@ -62,15 +62,27 @@ public enum TileType {
     MONTE_ESQUINA_INTERIOR_DER("/pruebas/monte_esquina_interior_arriba_der.png"),
     MONTE_ESQUINA_INTERIOR_IZD("/pruebas/monte_esquina_interior_arriba izda.png"),
     NEGRO("/pruebas/negro.png"),
-    CUEVA_SALVAJE("/pruebas/monte_centro.png");
-
-
-
+    CUEVA_SALVAJE("/pruebas/monte_centro.png"),
+    TIERRA_DISTORSION("/pruebas/tierra_distorsion.png"),
+    ROCA_DISTORSION("/pruebas/roca_distorsion.png"),
+    VACIO_DISTORSION("/pruebas/vacio_distorsion.png"),
+    PALMERA_DISTORSION("/pruebas/palmera_distorsion.png"),
+    PALMERA_MEDIO_DISTORSION("/pruebas/palmera_distorsion_medio.png"),
+    PALMERA_ARRIBA_DISTORSION("/pruebas/palmera_distorsion_arriba.png"),
+    BOQUETE_DISTORSION("/pruebas/boquete_distorsion.png"),
+    GIRO_ARR_IZD_DISTORSION("/pruebas/tierra_distorsion_giro_arriba_izd.png"),
+    GIRO_ABJ_IZD_DISTORSION("/pruebas/tierra_distorsion_giro_abajo_izd.png"),
+    GIRO_ARR_DER_DISTORSION("/pruebas/tierra_distorsion_giro_arriba_der.png"),
+    GIRO_ABJ_DER_DISTORSION("/pruebas/tierra_distorsion_giro_abajo_der.png"),
+    ESQUINA_ARRIBA_IZD_DISTORSION("/pruebas/esquina_distorsion_arriba_izd.png"),
+    ESQUINA_ARRIBA_DISTORSION("/pruebas/esquina_distorsion_arriba.png"),
+    ESQUINA_ARRIBA_DER_DISTORSION("/pruebas/esquina_distorsion_arriba_der.png"),
+    ESQUINA_IZD_DISTORSION("/pruebas/esquina_distorsion_izd.png"),
+    ESQUINA_DER_DISTORSION("/pruebas/esquina_distorsion_der.png"),
+    ESQUINA_ABAJO_IZD_DISTORSION("/pruebas/esquina_distorsion_abajo_izd.png"),
+    ESQUINA_ABAJO_DISTORSION("/pruebas/esquina_distorsion_abajo.png"),
+    ESQUINA_ABAJO_DER_DISTORSION("/pruebas/esquina_distorsion_abajo_der.png"),
     ;
-
-
-
-
     public final Image imagen;
 
     TileType(String rutaImagen){

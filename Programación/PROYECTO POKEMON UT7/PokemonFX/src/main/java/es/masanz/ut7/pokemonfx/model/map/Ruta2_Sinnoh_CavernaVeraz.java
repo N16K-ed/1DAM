@@ -28,7 +28,7 @@ public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
 
         int[][] mapaRuta = {
                 { 0, 0, 0, 0, 0, 0, 0, 0,17, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,16, 0, 0, 0, 0, 0, 0, 0, 0},
-                { 0, 0, 0, 0, 0, 0, 0, 0,10,17, 8, 8, 8, 8, 8, 8, 8, 8, 8,16, 9, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0,10,17, 8, 8, 8,46, 8, 8, 8, 8, 8,16, 9, 0, 0, 0, 0, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 0, 0,17, 8,14,10, 6, 6, 6, 6, 6, 6,38,37, 6, 9,13, 8,16, 0, 0, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 0, 0,10,17, 8,14, 6, 6, 6, 6, 6, 6,36,35, 6,13, 8,16, 9, 0, 0, 0, 0, 0, 0},
                 { 0, 0, 0, 0,17, 8,14,10, 6, 6, 6, 6, 6, 6, 6, 6,36,35, 6, 6, 6, 9,13, 8,16, 0, 0, 0, 0},
@@ -259,7 +259,11 @@ public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
                         mapData[y][x] = TileType.AGUA_CUEVA.ordinal();
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();
                         break;
-
+                    case 46:
+                        mapData[y][x] = TileType.PUERTA_CUEVA.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        teleportMap[y][x] = "Mundo Distorsión";
+                        break;
                     default:
                         mapData[y][x] = TileType.CAMINO_BLANCO.ordinal();
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();

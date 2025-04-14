@@ -30,11 +30,13 @@ public class MapManager {
         Mapa ruta2 = new Ruta2();
         Mapa ruta2_S = new Ruta2_Sinnoh_LagoVeraz();
         Mapa ruta2_S_cav = new Ruta2_Sinnoh_CavernaVeraz();
+        Mapa mundoDistorsion = new MundoDistorsion();
         mapas = new HashMap<>();
         //mapas.put(ruta1.getNombre(), ruta1);
         //mapas.put(ruta2.getNombre(), ruta2);
         mapas.put(ruta2_S.getNombre(), ruta2_S);
         mapas.put(ruta2_S_cav.getNombre(), ruta2_S_cav);
+        mapas.put(mundoDistorsion.getNombre(), mundoDistorsion);
     }
 
     // Settea las variables necesarias en funcion de la ruta seleccionada
