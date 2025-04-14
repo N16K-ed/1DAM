@@ -6,12 +6,14 @@ import es.masanz.ut7.pokemonfx.model.base.Mapa;
 import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
 import es.masanz.ut7.pokemonfx.model.enums.TileType;
 import es.masanz.ut7.pokemonfx.model.fx.NPC;
+import es.masanz.ut7.pokemonfx.model.pokemons.Bronzong;
+import es.masanz.ut7.pokemonfx.model.pokemons.Bronzor;
 import es.masanz.ut7.pokemonfx.model.pokemons.Bulbasaur;
 import es.masanz.ut7.pokemonfx.model.pokemons.Charmander;
 
 import java.util.ArrayList;
 
-import static es.masanz.ut7.pokemonfx.util.Configuration.ABAJO;
+import static es.masanz.ut7.pokemonfx.util.Configuration.*;
 
 public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
 
@@ -28,7 +30,7 @@ public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
 
         int[][] mapaRuta = {
                 { 0, 0, 0, 0, 0, 0, 0, 0,17, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,16, 0, 0, 0, 0, 0, 0, 0, 0},
-                { 0, 0, 0, 0, 0, 0, 0, 0,10,17, 8, 8, 8, 8, 8, 8, 8, 8, 8,16, 9, 0, 0, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 0, 0,10,17, 8, 8, 8, 8,46, 8, 8, 8, 8,16, 9, 0, 0, 0, 0, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 0, 0,17, 8,14,10, 6, 6, 6, 6, 6, 6,38,37, 6, 9,13, 8,16, 0, 0, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 0, 0,10,17, 8,14, 6, 6, 6, 6, 6, 6,36,35, 6,13, 8,16, 9, 0, 0, 0, 0, 0, 0},
                 { 0, 0, 0, 0,17, 8,14,10, 6, 6, 6, 6, 6, 6, 6, 6,36,35, 6, 6, 6, 9,13, 8,16, 0, 0, 0, 0},
@@ -77,10 +79,24 @@ public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
 
         // teleportMap[3][9] = "Ruta 1";
 
-        Entrenador helio = new Entrenador();
-        helio.incluirPokemonParaCombatir(0, new Bulbasaur(1));
+        Entrenador galaxia1 = new Entrenador();
+        galaxia1.incluirPokemonParaCombatir(0, new Bronzor(30));
+        galaxia1.incluirPokemonParaCombatir(1, new Bronzor(31));
 
-        npcs.add(new NPC(2, 1, ABAJO, helio));
+        Entrenador galaxia2 = new Entrenador();
+        galaxia2.incluirPokemonParaCombatir(0, new Bulbasaur(1));
+
+        Entrenador galaxia3 = new Entrenador();
+        galaxia3.incluirPokemonParaCombatir(0, new Bulbasaur(1));
+
+        Entrenador galaxia4 = new Entrenador();
+        galaxia4.incluirPokemonParaCombatir(0, new Bulbasaur(1));
+
+        npcs.add(new NPC(13, 22, DERECHA,6, galaxia1));
+        npcs.add(new NPC(14, 2, ABAJO,6, galaxia2));
+        npcs.add(new NPC(12, 15, DERECHA,6, galaxia3));
+        npcs.add(new NPC(16, 7, IZQUIERDA,6, galaxia4));
+
 
         for (int y = 0; y < altura; y++) {
             for (int x = 0; x < anchura; x++) {
@@ -259,7 +275,11 @@ public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
                         mapData[y][x] = TileType.AGUA_CUEVA.ordinal();
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();
                         break;
-
+                    case 46:
+                        mapData[y][x] = TileType.PUERTA_CUEVA.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        teleportMap[y][x] = "Mundo Distorsión";
+                        break;
                     default:
                         mapData[y][x] = TileType.CAMINO_BLANCO.ordinal();
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();

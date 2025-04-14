@@ -85,7 +85,7 @@ public class MapController {
         moving = false;
         blockGame = false;
         iniciandoTransicion = false;
-        lastDirection = null;
+        lastDirection = KeyCode.W;
         pressedKeys = new HashSet<>();
         npcs = new ArrayList<>();
         jugadorImage = TrainerType.JUGADOR.imagen;

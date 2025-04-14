@@ -5,11 +5,13 @@ import javafx.scene.image.Image;
 
 public enum TrainerType {
 
-    JUGADOR("/pruebas/jugador1.png"),
+    JUGADOR("/pruebas/dawn.png"),
     ENTRENADOR_1("/pruebas/entrenador1.png"),
     ENTRENADOR_2("/pruebas/entrenador2.png"),
     ENTRENADOR_3("/pruebas/entrenador3.png"),
-    ENTRENADOR_4("/pruebas/entrenador4.png");
+    ENTRENADOR_4("/pruebas/entrenador4.png"),
+    ENTRENADOR_5("/pruebas/entrenador5.png"),
+    ENTRENADOR_6("/pruebas/entrenador6.png");
 
     public final Image imagen;
 
