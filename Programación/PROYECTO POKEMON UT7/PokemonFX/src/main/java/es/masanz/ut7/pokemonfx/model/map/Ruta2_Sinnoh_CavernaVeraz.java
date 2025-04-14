@@ -80,7 +80,7 @@ public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
         Entrenador helio = new Entrenador();
         helio.incluirPokemonParaCombatir(0, new Bulbasaur(1));
 
-        npcs.add(new NPC(2, 1, ABAJO, helio));
+        npcs.add(new NPC(2, 1, ABAJO,1, helio));
 
         for (int y = 0; y < altura; y++) {
             for (int x = 0; x < anchura; x++) {

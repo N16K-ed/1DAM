@@ -82,6 +82,9 @@ public enum TileType {
     ESQUINA_ABAJO_IZD_DISTORSION("/pruebas/esquina_distorsion_abajo_izd.png"),
     ESQUINA_ABAJO_DISTORSION("/pruebas/esquina_distorsion_abajo.png"),
     ESQUINA_ABAJO_DER_DISTORSION("/pruebas/esquina_distorsion_abajo_der.png"),
+    INTERNO_DER_DISTORSION("/pruebas/giro_distorsion_interior_der.png"),
+    INTERNO_IZD_DISTORSION("/pruebas/giro_distorsion_interior_izd.png"),
+
     ;
     public final Image imagen;
 

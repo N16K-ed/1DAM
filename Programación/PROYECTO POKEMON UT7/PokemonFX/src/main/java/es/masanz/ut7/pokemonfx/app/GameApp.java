@@ -20,9 +20,7 @@ public class GameApp extends Application {
     public static void main(String[] args) {
         // TODO 00: AQUI DEFINIR VUESTRO ENTRENADOR INICIAL
         jugador = new Entrenador();
-
         //Pokemon en el equipo
-
         //Dar iniciales.
 
         jugador.incluirPokemonParaCombatir(0,new Bidoof(1));
