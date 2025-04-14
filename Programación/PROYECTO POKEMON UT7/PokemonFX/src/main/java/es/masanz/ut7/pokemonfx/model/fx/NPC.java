@@ -27,15 +27,7 @@ public class NPC {
 
     // TODO 12: MODIFICAR ESTE CONSTRUCTOR PARA LLAMAR AL CONSTRUCTOR COMPLETO
     public NPC(int x, int y, Entrenador entrenador) {
-        this.x = x;
-        this.y = y;
-        this.mirandoA = (int) (Math.random() * 4);
-        this.elegirEntrenador = (int) (Math.random() * 4)+1;
-        this.entrenador = entrenador;
-        this.posX = x * TILE_SIZE;
-        this.posY = y * TILE_SIZE;
-        this.contadorCambioSprite = 0;
-        generateSprite();
+        this(x, y, (int) (Math.random() * 4), (int) (Math.random() * 4) + 1, entrenador);
     }
 
     public NPC(int x, int y, int mirandoA, Entrenador entrenador) {

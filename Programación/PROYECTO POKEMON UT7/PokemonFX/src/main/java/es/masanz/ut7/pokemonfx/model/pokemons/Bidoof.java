@@ -35,6 +35,9 @@ public class Bidoof extends Pokemon implements Normal {
 
         Ataque bofetonLodo = new Ataque("Bofetón Lodo", 20, 100, Tipo.TIERRA, true, 10,1);
         asignarAtaque(bofetonLodo.getNombre(), bofetonLodo);
+
+        Ataque ataqueRapido = new Ataque("Ataque Rápido", 40, 100, Tipo.NORMAL, false, 20,2);
+        asignarAtaque(ataqueRapido.getNombre(), ataqueRapido);
     }
 
 }

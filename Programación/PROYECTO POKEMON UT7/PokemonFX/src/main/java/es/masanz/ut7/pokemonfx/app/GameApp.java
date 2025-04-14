@@ -25,7 +25,7 @@ public class GameApp extends Application {
 
         //Dar iniciales.
 
-        jugador.incluirPokemonParaCombatir(0,new Bidoof(25));
+        jugador.incluirPokemonParaCombatir(0,new Bidoof(1));
         jugador.incluirPokemonParaCombatir(1,new Bronzor(33));
         jugador.incluirPokemonParaCombatir(2,new Bronzong(36));
         jugador.incluirPokemonParaCombatir(3,new Charmeleon(7));
