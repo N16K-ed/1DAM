@@ -6,7 +6,7 @@ import es.masanz.ut7.pokemonfx.model.enums.Tipo;
 import es.masanz.ut7.pokemonfx.model.type.Veneno;
 import es.masanz.ut7.pokemonfx.model.type.Volador;
 
-public class Golbat extends Pokemon implements Volador, Veneno {
+public class Golbat extends Pokemon implements Veneno, Volador {
     public Golbat(int nivel){
         super(nivel);
     }

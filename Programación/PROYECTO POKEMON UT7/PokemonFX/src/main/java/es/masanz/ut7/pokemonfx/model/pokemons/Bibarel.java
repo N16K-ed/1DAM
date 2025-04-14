@@ -3,9 +3,10 @@ package es.masanz.ut7.pokemonfx.model.pokemons;
 import es.masanz.ut7.pokemonfx.model.base.Ataque;
 import es.masanz.ut7.pokemonfx.model.base.Pokemon;
 import es.masanz.ut7.pokemonfx.model.enums.Tipo;
+import es.masanz.ut7.pokemonfx.model.type.Agua;
 import es.masanz.ut7.pokemonfx.model.type.Normal;
 
-public class Bibarel extends Pokemon implements Normal {
+public class Bibarel extends Pokemon implements Normal, Agua {
 
     public Bibarel(int nivel) {
         super(nivel);
