@@ -30,7 +30,6 @@ public class Bronzong extends Pokemon implements Acero, Psiquico {
         Ataque Psiquico = new Ataque("Psíquico", 90, 100, Tipo.PSIQUICO, true, 15,1);
         asignarAtaque(Psiquico.getNombre(), Psiquico);
 
-
         Ataque bofetonLodo = new Ataque("Bofetón Lodo", 20, 100, Tipo.TIERRA, true, 10,1);
         asignarAtaque(bofetonLodo.getNombre(), bofetonLodo);
 

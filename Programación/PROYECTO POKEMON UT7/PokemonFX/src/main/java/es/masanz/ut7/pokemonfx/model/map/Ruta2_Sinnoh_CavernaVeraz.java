@@ -6,10 +6,7 @@ import es.masanz.ut7.pokemonfx.model.base.Mapa;
 import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
 import es.masanz.ut7.pokemonfx.model.enums.TileType;
 import es.masanz.ut7.pokemonfx.model.fx.NPC;
-import es.masanz.ut7.pokemonfx.model.pokemons.Bronzong;
-import es.masanz.ut7.pokemonfx.model.pokemons.Bronzor;
-import es.masanz.ut7.pokemonfx.model.pokemons.Bulbasaur;
-import es.masanz.ut7.pokemonfx.model.pokemons.Charmander;
+import es.masanz.ut7.pokemonfx.model.pokemons.*;
 
 import java.util.ArrayList;
 
@@ -22,7 +19,14 @@ public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
     @Override
     public void cargarPokemonSalvajes(){
         pokemonSalvajes = new ArrayList<>();
-        pokemonSalvajes.add(new Charmander(1));
+        pokemonSalvajes.add(new Golbat(20));
+        pokemonSalvajes.add(new Golbat(21));
+        pokemonSalvajes.add(new Golbat(22));
+        pokemonSalvajes.add(new Golbat(24));
+        pokemonSalvajes.add(new Bronzor(26));
+        pokemonSalvajes.add(new Bronzor(27));
+        pokemonSalvajes.add(new Bibarel(28));
+
 
 
     }@Override
@@ -80,17 +84,20 @@ public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
         // teleportMap[3][9] = "Ruta 1";
 
         Entrenador galaxia1 = new Entrenador();
-        galaxia1.incluirPokemonParaCombatir(0, new Bronzor(30));
-        galaxia1.incluirPokemonParaCombatir(1, new Bronzor(31));
+        galaxia1.incluirPokemonParaCombatir(0, new Bronzor(33));
+        galaxia1.incluirPokemonParaCombatir(1, new Bronzor(34));
 
         Entrenador galaxia2 = new Entrenador();
-        galaxia2.incluirPokemonParaCombatir(0, new Bulbasaur(1));
+        galaxia2.incluirPokemonParaCombatir(0, new Bronzor(36));
+        galaxia2.incluirPokemonParaCombatir(1, new Bronzong(37));
+        galaxia2.incluirPokemonParaCombatir(2, new Golbat(35));
 
         Entrenador galaxia3 = new Entrenador();
-        galaxia3.incluirPokemonParaCombatir(0, new Bulbasaur(1));
+        galaxia3.incluirPokemonParaCombatir(0, new Golbat(38));
 
         Entrenador galaxia4 = new Entrenador();
-        galaxia4.incluirPokemonParaCombatir(0, new Bulbasaur(1));
+        galaxia4.incluirPokemonParaCombatir(0, new Bronzong(37));
+        galaxia4.incluirPokemonParaCombatir(1, new Golbat(34));
 
         npcs.add(new NPC(13, 22, DERECHA,6, galaxia1));
         npcs.add(new NPC(14, 2, ABAJO,6, galaxia2));

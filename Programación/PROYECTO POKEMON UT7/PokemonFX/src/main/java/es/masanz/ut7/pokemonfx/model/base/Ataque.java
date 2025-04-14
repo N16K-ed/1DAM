@@ -94,29 +94,31 @@ public class Ataque {
     }
 
     protected double obtenerEfectividad(Pokemon objetivo, StringBuilder sb) {
-        double multiplicador = 1;
+        double multiplicador = 1.0;
         Class<?>[] interfaces = objetivo.getClass().getInterfaces();
-        if(interfaces!=null && interfaces.length>0){
-            for (Class<?> interfaceType : interfaces) {
-                if(tipo.esDebilContra(interfaceType.getSimpleName().toUpperCase())){
-                    //System.out.println(tipo +" es debil contra "+interfaceType.getSimpleName().toUpperCase());
-                    sb.append("No es muy eficaz... ");
-                    multiplicador *= 0.5;
-                }
-                if(tipo.esFuerteContra(interfaceType.getSimpleName().toUpperCase())){
-                    //System.out.println(tipo +" es fuerte contra "+interfaceType.getSimpleName().toUpperCase());
-                    sb.append("¡Es super eficaz! ");
-                    multiplicador *= 2;
-                }
-                if(tipo.esInmuneContra(interfaceType.getSimpleName().toUpperCase())){
-                    //System.out.println(tipo +" es inmune contra "+interfaceType.getSimpleName().toUpperCase());
-                    sb.append("Es inmune a ataques de tipo "+tipo.toString().toLowerCase()+"...");
-                    multiplicador *= 0;
-                }
+
+        for (Class<?> interfaceType : interfaces) {
+            String tipoDefensor = interfaceType.getSimpleName().toUpperCase();
+            Tipo tipoDef = Tipo.valueOf(tipoDefensor);
+            if (tipoDef.esInmuneA(this.tipo.name())) {
+                sb.append(" Es inmune a ataques de tipo ").append(this.tipo.name().toLowerCase()).append("... ");
+                return 0.0;
             }
+            if (tipoDef.recibeDanoDeFormaDebil(this.tipo.name())) {
+                multiplicador *= 2.0;
+            } else if (tipoDef.recibeDanoDeFormaResistente(this.tipo.name())) {
+                multiplicador *= 0.5;
+            }
+        }
+        if (multiplicador == 0.5) {
+            sb.append(" No es muy eficaz... ");
+        } else if (multiplicador >= 2.0) {
+            sb.append(" ¡Es super eficaz! ");
         }
         return multiplicador;
     }
+
+
 
     public String getNombre() {
         return nombre;

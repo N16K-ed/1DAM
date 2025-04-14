@@ -16,6 +16,8 @@ public enum Stats {
     BIBAREL("400", 79, 85, 60, 71, 55, 60, 144),
     BRONZOR("436", 57, 24, 86, 23, 24, 86, 60),
     BRONZONG("437", 67, 89, 116, 33, 79, 116, 188),
+    GOLBAT("042", 75, 80, 70, 90, 65, 75, 159),
+    CROBAT("169", 85, 90, 80, 130, 70, 80, 241),
     ;
 
     public final String numPokedex;

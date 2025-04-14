@@ -6,8 +6,8 @@ import es.masanz.ut7.pokemonfx.model.enums.Tipo;
 import es.masanz.ut7.pokemonfx.model.type.Veneno;
 import es.masanz.ut7.pokemonfx.model.type.Volador;
 
-public class Golbat extends Pokemon implements Volador, Veneno {
-    public Golbat(int nivel){
+public class Crobat extends Pokemon implements Volador, Veneno {
+    public Crobat(int nivel){
         super(nivel);
     }
 
@@ -24,12 +24,12 @@ public class Golbat extends Pokemon implements Volador, Veneno {
     @Override
     protected void asignarAtaques() {
 
-        Ataque picotazoVenenoso = new Ataque("Picotazo venenoso", 20, 100, Tipo.VENENO, false, 15,1);
-        asignarAtaque(picotazoVenenoso.getNombre(), picotazoVenenoso);
+        Ataque venenoX = new Ataque("Veneno X", 70, 100, Tipo.VENENO, false, 15,1);
+        asignarAtaque(venenoX.getNombre(), venenoX);
 
 
-        Ataque mordisco = new Ataque("Mordisco", 60, 100, Tipo.SINIESTRO, false, 25,1);
-        asignarAtaque(mordisco.getNombre(), mordisco);
+        Ataque triturar = new Ataque("Triturar", 80, 100, Tipo.SINIESTRO, false, 25,1);
+        asignarAtaque(triturar.getNombre(), triturar);
 
 
         Ataque ataqueAla = new Ataque("Ataque ala", 60, 100, Tipo.VOLADOR, false, 35,1);

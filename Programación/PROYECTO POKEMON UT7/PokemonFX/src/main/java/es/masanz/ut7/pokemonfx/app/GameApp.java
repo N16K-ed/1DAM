@@ -23,10 +23,10 @@ public class GameApp extends Application {
         //Pokemon en el equipo
         //Dar iniciales.
 
-        jugador.incluirPokemonParaCombatir(0,new Bidoof(1));
-        jugador.incluirPokemonParaCombatir(1,new Bronzor(33));
+        jugador.incluirPokemonParaCombatir(0,new Crobat(40));
+        jugador.incluirPokemonParaCombatir(1,new Golbat(33));
         jugador.incluirPokemonParaCombatir(2,new Bronzong(36));
-        jugador.incluirPokemonParaCombatir(3,new Charmeleon(7));
+        jugador.incluirPokemonParaCombatir(3,new Charmeleon(35));
         // Pokemon en el PC
         jugador.getPokemonesCapturados().add(new Bulbasaur(16));
         jugador.getPokemonesCapturados().add(new Charmander(16));
