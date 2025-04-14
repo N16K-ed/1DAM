@@ -5,6 +5,7 @@ import es.masanz.ut7.pokemonfx.model.base.Evento;
 import es.masanz.ut7.pokemonfx.model.base.Mapa;
 import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
 import es.masanz.ut7.pokemonfx.model.enums.TileType;
+import es.masanz.ut7.pokemonfx.model.event.EventoBotiquin;
 import es.masanz.ut7.pokemonfx.model.event.EventoMensaje;
 import es.masanz.ut7.pokemonfx.model.fx.NPC;
 import es.masanz.ut7.pokemonfx.model.pokemons.Bronzong;
@@ -37,8 +38,8 @@ public class MundoDistorsion extends Mapa {
                 { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,16, 2, 2,18, 1,20,19,18, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
                 { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,16, 2, 8,17, 1,16, 8,17, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
                 { 1, 1, 1, 1, 1, 1, 1,20,18, 1, 1,16, 2,22,13, 1,15,14,13, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                { 1, 1, 1, 1, 1, 1, 1,15,13, 1, 1,16, 2,17, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-                { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,16, 2,17,20, 8,19,19,18, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+                { 1, 1, 1, 1, 1, 1, 1,15,13, 1, 1,16,23,17, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+                { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,16, 2,17,20, 3,19,19,18, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
                 { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,16, 2, 2, 2, 2, 7, 8, 2,18, 1, 1, 1, 1, 1, 1, 1, 1, 1},
                 { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,16, 2, 2, 8, 2, 2, 2, 2,17, 1, 1, 1, 1, 1, 1, 1, 1, 1},
                 { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,15,21, 2, 2, 2,22,14,14,13, 1, 1, 1, 1, 1, 1, 1, 1, 1},
@@ -165,6 +166,11 @@ public class MundoDistorsion extends Mapa {
                     case 22:
                         mapData[y][x] = TileType.INTERNO_IZD_DISTORSION.ordinal();
                         collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 23:
+                        mapData[y][x] = TileType.TIERRA_DISTORSION.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        eventsMap[y][x] = new EventoBotiquin();
                         break;
                     default:
                         mapData[y][x] = TileType.CAMINO_BLANCO.ordinal();

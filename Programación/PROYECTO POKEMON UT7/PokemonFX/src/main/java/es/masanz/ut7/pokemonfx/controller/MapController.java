@@ -1,10 +1,13 @@
 package es.masanz.ut7.pokemonfx.controller;
 
+import es.masanz.ut7.pokemonfx.app.GameApp;
 import es.masanz.ut7.pokemonfx.manager.MapManager;
 import es.masanz.ut7.pokemonfx.model.base.Evento;
+import es.masanz.ut7.pokemonfx.model.base.Pokemon;
 import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
 import es.masanz.ut7.pokemonfx.model.enums.TileType;
 import es.masanz.ut7.pokemonfx.model.enums.TrainerType;
+import es.masanz.ut7.pokemonfx.model.event.EventoBotiquin;
 import es.masanz.ut7.pokemonfx.model.event.EventoMensaje;
 import es.masanz.ut7.pokemonfx.model.fx.NPC;
 import javafx.animation.AnimationTimer;
@@ -331,6 +334,21 @@ public class MapController {
                         eventsMap[tileY][tileX] = null;
                         preRenderMap(); //Actualizar gráficos;
 
+                    } else if (evento instanceof EventoBotiquin){
+                        blockGame = true;
+                        Platform.runLater(() -> {
+                            VBox eventoRoot = ((EventoBotiquin) evento).getRoot();
+                            StackPane.setAlignment(eventoRoot, Pos.BOTTOM_CENTER);
+                            root.getChildren().add(((EventoBotiquin) evento).getRoot());
+                        });
+
+                        for (int i =0; i < GameApp.jugador.getPokemonesCombate().length; i++){
+                            if (GameApp.jugador.getPokemonesCombate()[i] != null){
+                                GameApp.jugador.getPokemonesCombate()[i].setHpActual(GameApp.jugador.getPokemonesCombate()[i].getMaxHP());
+                            }
+                        }
+                        eventsMap[tileY][tileX] = null;
+                        preRenderMap();
                     } else {
                         eventsMap[tileY][tileX] = null;
                         preRenderMap();
