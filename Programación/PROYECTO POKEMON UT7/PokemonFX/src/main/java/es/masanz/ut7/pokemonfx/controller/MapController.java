@@ -380,7 +380,17 @@ public class MapController {
                         eventsMap[tileY][tileX] = null;
                         preRenderMap();
                         blockGame = false;
-                    }else {
+                    } else if (evento instanceof EventoGiratinaCombate) {
+                        blockGame = true;
+                        Platform.runLater(() -> {
+                            VBox eventoRoot = ((EventoGiratinaCombate) evento).getRoot();
+                            StackPane.setAlignment(eventoRoot, Pos.BOTTOM_CENTER);
+                            root.getChildren().add(((EventoGiratinaCombate) evento).getRoot());
+                        });
+                        eventsMap[tileY][tileX] = null;
+                        preRenderMap();
+                        blockGame = false;
+                    } else {
                         eventsMap[tileY][tileX] = null;
                         preRenderMap();
                         blockGame = true;

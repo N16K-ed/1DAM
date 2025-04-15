@@ -63,6 +63,12 @@ public class CombateController {
     private void loadBattleScene(boolean pokemonEnemigoAtaca) {
         root = new Pane();
 
+        if (oponentNPC != null && "Giratina".equals(oponentNPC.getEntrenador().getNombre())) {
+            root.setStyle("-fx-background-color: #00008B;"); // Azul oscuro
+        } else {
+            root.setStyle("-fx-background-color: white;"); // Blanco
+        }
+
         if(selectedPokemon==null){
             mostrarPantallaDerrota();
             return;

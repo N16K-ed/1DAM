@@ -5,13 +5,9 @@ import es.masanz.ut7.pokemonfx.model.base.Evento;
 import es.masanz.ut7.pokemonfx.model.base.Mapa;
 import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
 import es.masanz.ut7.pokemonfx.model.enums.TileType;
-import es.masanz.ut7.pokemonfx.model.event.EventoBotiquin;
-import es.masanz.ut7.pokemonfx.model.event.EventoHelio;
-import es.masanz.ut7.pokemonfx.model.event.EventoHelioCombate;
-import es.masanz.ut7.pokemonfx.model.event.EventoMensaje;
+import es.masanz.ut7.pokemonfx.model.event.*;
 import es.masanz.ut7.pokemonfx.model.fx.NPC;
-import es.masanz.ut7.pokemonfx.model.pokemons.Bronzong;
-import es.masanz.ut7.pokemonfx.model.pokemons.Bulbasaur;
+import es.masanz.ut7.pokemonfx.model.pokemons.*;
 
 import java.util.ArrayList;
 
@@ -34,7 +30,7 @@ public class MundoDistorsion extends Mapa {
                 { 1, 1, 1, 1, 1,15,14,13, 1,20,19,19,19, 3,19,18, 1, 1,16, 7,17, 1, 1, 1, 1, 1, 1, 1, 1},
                 { 1, 1, 1, 1, 1, 1, 1, 1, 1,16, 7, 3, 2, 2, 7,17, 1, 1,16, 6,17, 1, 1, 1, 1, 1, 1, 1, 1},
                 { 1, 1, 1, 1, 1, 1, 1, 1, 1,16, 6, 2, 2, 2, 4,17, 1, 1,16, 4,17, 1, 1, 1, 1, 1, 1, 1, 1},
-                { 1, 1, 1, 1, 1, 1, 1, 1, 1,16, 4, 2, 2, 2, 8,17, 1, 1,15,14,13, 1, 1, 1, 1, 1, 1, 1, 1},
+                { 1, 1, 1, 1, 1, 1, 1, 1, 1,16, 4, 2,26, 2, 8,17, 1, 1,15,14,13, 1, 1, 1, 1, 1, 1, 1, 1},
                 { 1, 1, 1, 1, 1, 1, 1, 1, 1,15,14,21,25,22,14,13, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
                 { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,16,24,17, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
                 { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,16, 2, 2,18, 1,20,19,18, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
@@ -74,8 +70,15 @@ public class MundoDistorsion extends Mapa {
 
         Entrenador helio = new Entrenador();
         helio.incluirPokemonParaCombatir(0, new Bronzong(40));
+        helio.incluirPokemonParaCombatir(1, new Crobat(42));
+        helio.incluirPokemonParaCombatir(2, new Gyarados(44));
+        helio.incluirPokemonParaCombatir(3, new Golbat(41));
+
+        Entrenador giratina = new Entrenador("Giratina");
+        giratina.incluirPokemonParaCombatir(0, new Giratina(45));
 
         npcs.add(new NPC(12, 10, ABAJO, 5, helio));
+        npcs.add(new NPC (12, 9, ABAJO, 7, giratina));
 
         for (int y = 0; y < altura; y++) {
             for (int x = 0; x < anchura; x++) {
@@ -183,6 +186,11 @@ public class MundoDistorsion extends Mapa {
                         mapData[y][x] = TileType.TIERRA_DISTORSION.ordinal();
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();
                         eventsMap[y][x] = new EventoHelioCombate();
+                        break;
+                    case 26:
+                        mapData[y][x] = TileType.TIERRA_DISTORSION.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        eventsMap[y][x] = new EventoGiratinaCombate();
                         break;
                     default:
                         mapData[y][x] = TileType.CAMINO_BLANCO.ordinal();

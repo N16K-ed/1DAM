@@ -22,13 +22,15 @@ public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
     @Override
     public void cargarPokemonSalvajes(){
         pokemonSalvajes = new ArrayList<>();
-        pokemonSalvajes.add(new Golbat(20));
-        pokemonSalvajes.add(new Golbat(21));
-        pokemonSalvajes.add(new Golbat(22));
-        pokemonSalvajes.add(new Golbat(24));
-        pokemonSalvajes.add(new Bronzor(26));
-        pokemonSalvajes.add(new Bronzor(27));
-        pokemonSalvajes.add(new Bibarel(28));
+        pokemonSalvajes.add(new Golbat(35));
+        pokemonSalvajes.add(new Golbat(41));
+        pokemonSalvajes.add(new Golbat(39));
+        pokemonSalvajes.add(new Golbat(40));
+        pokemonSalvajes.add(new Bronzor(36));
+        pokemonSalvajes.add(new Bronzor(33));
+        pokemonSalvajes.add(new Bronzor(35));
+        pokemonSalvajes.add(new Bronzong(40));
+        pokemonSalvajes.add(new Bibarel(40));
 
 
 

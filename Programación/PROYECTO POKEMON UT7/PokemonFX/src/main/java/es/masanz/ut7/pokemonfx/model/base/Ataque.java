@@ -14,6 +14,7 @@ public class Ataque {
     protected int cantidad;
     protected int prioridad;
     protected int danofijo;
+    protected boolean recuperar;
 
     public Ataque(String nombre, int dmgBase, int precision, Tipo tipo, boolean esEspecial, int cantidad, int prioridad) {
         this.nombre = nombre;
@@ -35,6 +36,18 @@ public class Ataque {
         this.cantidad = cantidad;
         this.prioridad = prioridad;
         this.danofijo = danofijo;
+        this.recuperar = false;
+    }
+    public Ataque(String nombre, Tipo tipo, boolean esEspecial, int cantidad,int prioridad) {
+        this.nombre = nombre;
+        this.dmgBase = 0;
+        this.precision = 100;
+        this.tipo = tipo;
+        this.esEspecial = esEspecial;
+        this.pp = cantidad;
+        this.cantidad = cantidad;
+        this.prioridad = prioridad;
+        this.recuperar = true;
     }
 
     public String ejecutarAtaque(Pokemon ejecutor, Pokemon destinatario) {
@@ -44,7 +57,16 @@ public class Ataque {
         if(cantidad > 0){
             cantidad--;
             if (Math.random() * 100 < precision) {
-                int dano = calcularDano(ejecutor, destinatario, sb);
+               int dano;
+                if(recuperar){
+                    dano = calcularDano(ejecutor, ejecutor, sb);
+                    ejecutor.setHpActual(Math.min(ejecutor.getHpActual() + dano, ejecutor.getMaxHP())); // Actualiza los PS
+                    sb.append(" ¡" + nombrePokemonE + " recupera " + dano + " PS!");
+                    return sb.toString();
+                }else {
+                     dano = calcularDano(ejecutor, destinatario, sb);
+                }
+
                 sb.append(" Hace "+dano+" puntos de daño.");
                 destinatario.recibirAtaque(ejecutor, dano);
             } else {
@@ -60,8 +82,10 @@ public class Ataque {
     protected int calcularDano(Pokemon ejecutor, Pokemon objetivo, StringBuilder sb) {
         int ataque = esEspecial ? ejecutor.getAtaqueEspecial() : ejecutor.getAtaque();
         int defensa = esEspecial ? objetivo.getDefensaEspecial() : objetivo.getDefensa();
-        if(this.dmgBase == 0){
+        if(this.dmgBase == 0 && !this.recuperar){
             return this.danofijo;
+        }else if(this.dmgBase == 0){
+            return (int) (ejecutor.getMaxHP() * 0.5);
         }
         double danioBase = (((2.0 * ejecutor.getNivel() + 10) / 250.0) * (ataque / (double) defensa) * dmgBase + 2);
         // Aplicar STAB, es decir, el pokemon que ejecuta el ataque y el propio ataque son del mismo tipo
@@ -158,5 +182,9 @@ public class Ataque {
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
+    }
+
+    public boolean isRecuperar(){
+        return recuperar;
     }
 }

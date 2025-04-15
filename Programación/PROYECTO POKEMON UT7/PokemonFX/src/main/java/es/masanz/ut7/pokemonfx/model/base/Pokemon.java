@@ -192,6 +192,10 @@ public abstract class Pokemon implements Cloneable {
         return puntosExp;
     }
 
+    public void setPuntosExp(int puntosExp) {
+        this.puntosExp = puntosExp;
+    }
+
     // TODO 01: Implementar clone. El clonado deberá generar un pokemon con nuevos IV.
 
     @Override
