@@ -7,6 +7,7 @@ import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
 import es.masanz.ut7.pokemonfx.model.enums.TileType;
 import es.masanz.ut7.pokemonfx.model.event.EventoBotiquin;
 import es.masanz.ut7.pokemonfx.model.event.EventoCuraPP;
+import es.masanz.ut7.pokemonfx.model.event.EventoGalaxia;
 import es.masanz.ut7.pokemonfx.model.fx.NPC;
 import es.masanz.ut7.pokemonfx.model.pokemons.*;
 
@@ -57,7 +58,7 @@ public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
                 { 0, 0, 0, 0,10, 6, 7,12, 6, 6, 6,36,35, 6, 6, 6, 6, 6, 6, 6, 6,11, 7, 6, 9, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 6, 7,12,10, 6, 6, 6,36,35, 6, 6, 6, 6, 6, 6, 6, 6, 9,11, 7, 6, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 0, 0,10, 6, 7,12, 6,40,39, 6, 6, 6, 6, 6, 6,11, 7, 6, 9, 0, 0, 0, 0, 0, 0},
-                { 0, 0, 0, 0, 0, 0, 6, 7,12,10, 6, 6, 6, 6, 6, 6, 6, 6, 6, 9,11, 7, 6, 0, 0, 0, 0, 0, 0},
+                { 0, 0, 0, 0, 0, 0, 6, 7,12,10, 6, 6, 6, 6,48, 6, 6, 6, 6, 9,11, 7, 6, 0, 0, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 0, 0, 0, 0,10, 6, 7, 7,12, 6, 6, 6,11, 7, 7, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 0, 0, 0, 0, 6, 7, 7,12,10, 6, 6, 6, 9,11, 7, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,10,10, 6, 6, 6, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -293,7 +294,12 @@ public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
                         mapData[y][x] = TileType.MONTE_CENTRO.ordinal();
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();
                         eventsMap[y][x] = new EventoCuraPP();
-                    break;
+                        break;
+                    case 48:
+                        mapData[y][x] = TileType.MONTE_CENTRO.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        eventsMap[y][x] = new EventoGalaxia();
+                        break;
                     default:
                         mapData[y][x] = TileType.CAMINO_BLANCO.ordinal();
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();

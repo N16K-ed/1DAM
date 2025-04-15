@@ -370,7 +370,17 @@ public class MapController {
                         eventsMap[tileY][tileX] = null;
                         preRenderMap();
                         blockGame = false;
-                    } else {
+                    } else if (evento instanceof EventoGalaxia) {
+                        blockGame = true;
+                        Platform.runLater(() -> {
+                            VBox eventoRoot = ((EventoGalaxia) evento).getRoot();
+                            StackPane.setAlignment(eventoRoot, Pos.BOTTOM_CENTER);
+                            root.getChildren().add(((EventoGalaxia) evento).getRoot());
+                        });
+                        eventsMap[tileY][tileX] = null;
+                        preRenderMap();
+                        blockGame = false;
+                    }else {
                         eventsMap[tileY][tileX] = null;
                         preRenderMap();
                         blockGame = true;
