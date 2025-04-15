@@ -23,11 +23,11 @@ public class Ruta2_Sinnoh_LagoVeraz extends Mapa {
     @Override
     public void cargarPokemonSalvajes(){
         pokemonSalvajes = new ArrayList<>();
-        pokemonSalvajes.add(new Squirtle(14));
-        pokemonSalvajes.add(new Bidoof(14));
+        pokemonSalvajes.add(new Squirtle(21));
+        pokemonSalvajes.add(new Bidoof(19));
         pokemonSalvajes.add(new Bidoof(15));
-        pokemonSalvajes.add(new Bibarel(15));
-        pokemonSalvajes.add(new Bibarel(16));
+        pokemonSalvajes.add(new Bibarel(38));
+        pokemonSalvajes.add(new Bibarel(39));
     }
 
     @Override

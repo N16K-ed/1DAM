@@ -28,14 +28,14 @@ public class Charizard extends Pokemon implements Fuego, Volador {
         Ataque tajoAereo = new Ataque("Tajo aéreo", 75, 95, Tipo.VOLADOR, true, 15,1);
         asignarAtaque(tajoAereo.getNombre(), tajoAereo);
 
-        Ataque ascuas = new Ataque("Ascuas", 40, 100, Tipo.FUEGO, true, 25,1);
-        asignarAtaque(ascuas.getNombre(), ascuas);
+        Ataque pulsoDragon = new Ataque("Pulso dragón", 80, 100, Tipo.DRAGON, true, 15,1);
+        asignarAtaque(pulsoDragon.getNombre(), pulsoDragon);
 
         Ataque lanzallamas = new Ataque("Lanzallamas", 95, 100, Tipo.FUEGO, true, 10,1);
         asignarAtaque(lanzallamas.getNombre(), lanzallamas);
 
-        Ataque cuchillada = new Ataque("Cuchillada", 70, 100, Tipo.NORMAL, false, 20,1);
-        asignarAtaque(cuchillada.getNombre(), cuchillada);
+        Ataque garraUmbria = new Ataque("Garra umbría", 80, 100, Tipo.FANTASMA, false, 15,1);
+        asignarAtaque(garraUmbria.getNombre(), garraUmbria);
 
     }
 }
