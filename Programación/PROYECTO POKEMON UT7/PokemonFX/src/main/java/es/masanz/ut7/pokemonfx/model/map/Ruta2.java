@@ -28,7 +28,7 @@ public class Ruta2 extends Mapa {
     protected void cargarMapa() {
 
         int[][] mapaRuta = {
-                {1, 1, 1, 1,  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 , 1, 1, 1},
+                {1, 1, 1, 1,  1, 1, 1, 1, 1, 1, 1, 1, 1, 1,15, 1 , 1, 1, 1},
                 {1, 2, 2, 1,  2, 2, 2, 3, 2, 2, 2, 3, 2, 2, 2, 1 , 2, 2, 1},
                 {1, 2, 2, 2,  2, 2, 2, 3, 2, 2, 2, 3, 2, 2, 2, 2 , 2, 2, 1},
                 {1, 2, 2, 11, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 12, 2, 2, 1},
@@ -140,6 +140,11 @@ public class Ruta2 extends Mapa {
                     case 14:
                         mapData[y][x] = TileType.MONTE_ESQUINA_INFERIOR_DERECHA.ordinal();
                         collisionMap[y][x] = CollisionType.PARED.ordinal();
+                        break;
+                    case 15:
+                        mapData[y][x] = TileType.AGUA_CUEVA.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        teleportMap[y][x] = "Lago Veraz";
                         break;
                     default:
                         mapData[y][x] = TileType.CAMINO_BLANCO.ordinal();

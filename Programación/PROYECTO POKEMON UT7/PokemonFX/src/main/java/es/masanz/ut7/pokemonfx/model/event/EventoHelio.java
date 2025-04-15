@@ -1,9 +1,7 @@
 package es.masanz.ut7.pokemonfx.model.event;
 
-import es.masanz.ut7.pokemonfx.app.GameApp;
 import es.masanz.ut7.pokemonfx.controller.MapController;
 import es.masanz.ut7.pokemonfx.model.base.Evento;
-import es.masanz.ut7.pokemonfx.model.base.Pokemon;
 import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -17,8 +15,9 @@ import javafx.scene.text.FontWeight;
 import static es.masanz.ut7.pokemonfx.util.Configuration.VIEW_HEIGHT;
 import static es.masanz.ut7.pokemonfx.util.Configuration.VIEW_WIDTH;
 
-public class EventoBotiquin implements Evento {
-    private String imagenEvento = "/pruebas/pokeball_transparente.png";
+public class EventoHelio implements Evento {
+
+    private String imagenEvento = "/pruebas/tierra_distorsion.png";
     private VBox root = new VBox();
     private Label label;
     private int step = 0; // Para controlar los diferentes estados del mensaje
@@ -26,7 +25,7 @@ public class EventoBotiquin implements Evento {
     @Override
     public void aplicarEfecto() {
         // Crear el Label para mostrar el primer mensaje
-        label = new Label("¡Has encontrado un botiquín!");
+        label = new Label("Helio: ¡NO DES NI UN PASO MÁS!");
         label.setFont(Font.font("Arial", FontWeight.BOLD, 12));
         label.setTextFill(Color.BLACK);
 
@@ -53,14 +52,24 @@ public class EventoBotiquin implements Evento {
         // Dependiendo del estado (paso), actualizar el texto
         switch (step) {
             case 1:
-                label.setText("Todos los Pokémon de tu equípo de combate han recuperado sus PS.");
+                label.setText("Helio: Estoy a punto de conseguir el poder absoluto.");
+                break;
+            case 2:
+                label.setText("Helio: Al fin. GIRATINA será mío.");
+                break;
+            case 3:
+                label.setText("Helio: y no dejaré que nadie se interponga en mi camino...");
+                break;
+            case 4:
+                label.setText("Helio: Da otro paso más y te las verás conmigo.");
+                break;
+            case 5:
+                label.setText("Helio: Pero te lo advierto, no hay nada que un niñato como tú pueda hacer para detenerme...");
+                break;
+            case 6:
+                label.setText("Helio: ¡Ahora vete por donde has venido y no me hagas perder más tiempo!");
                 break;
             default:
-                for (int i =0; i < GameApp.jugador.getPokemonesCombate().length; i++){
-                    if (GameApp.jugador.getPokemonesCombate()[i] != null){
-                        GameApp.jugador.getPokemonesCombate()[i].setHpActual(GameApp.jugador.getPokemonesCombate()[i].getMaxHP());
-                    }
-                }
                 // Eliminar el texto y cerrar la caja de texto
                 Platform.runLater(() -> {
                     imagenEvento ="";

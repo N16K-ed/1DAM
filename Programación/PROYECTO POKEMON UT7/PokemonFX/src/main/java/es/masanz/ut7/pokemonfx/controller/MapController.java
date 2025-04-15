@@ -7,8 +7,7 @@ import es.masanz.ut7.pokemonfx.model.base.Pokemon;
 import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
 import es.masanz.ut7.pokemonfx.model.enums.TileType;
 import es.masanz.ut7.pokemonfx.model.enums.TrainerType;
-import es.masanz.ut7.pokemonfx.model.event.EventoBotiquin;
-import es.masanz.ut7.pokemonfx.model.event.EventoMensaje;
+import es.masanz.ut7.pokemonfx.model.event.*;
 import es.masanz.ut7.pokemonfx.model.fx.NPC;
 import javafx.animation.AnimationTimer;
 import javafx.animation.KeyFrame;
@@ -341,14 +340,36 @@ public class MapController {
                             StackPane.setAlignment(eventoRoot, Pos.BOTTOM_CENTER);
                             root.getChildren().add(((EventoBotiquin) evento).getRoot());
                         });
-
-                        for (int i =0; i < GameApp.jugador.getPokemonesCombate().length; i++){
-                            if (GameApp.jugador.getPokemonesCombate()[i] != null){
-                                GameApp.jugador.getPokemonesCombate()[i].setHpActual(GameApp.jugador.getPokemonesCombate()[i].getMaxHP());
-                            }
-                        }
                         eventsMap[tileY][tileX] = null;
                         preRenderMap();
+                    } else if (evento instanceof EventoCuraPP){
+                        blockGame = true;
+                        Platform.runLater(() -> {
+                            VBox eventoRoot = ((EventoCuraPP) evento).getRoot();
+                            StackPane.setAlignment(eventoRoot, Pos.BOTTOM_CENTER);
+                            root.getChildren().add(((EventoCuraPP) evento).getRoot());
+                        });
+                        eventsMap[tileY][tileX] = null;
+                        preRenderMap();
+                    } else if (evento instanceof EventoHelio){
+                        blockGame = true;
+                        Platform.runLater(() -> {
+                            VBox eventoRoot = ((EventoHelio) evento).getRoot();
+                            StackPane.setAlignment(eventoRoot, Pos.BOTTOM_CENTER);
+                            root.getChildren().add(((EventoHelio) evento).getRoot());
+                        });
+                        eventsMap[tileY][tileX] = null;
+                        preRenderMap();
+                    } else if (evento instanceof EventoHelioCombate){
+                        blockGame = true;
+                        Platform.runLater(() -> {
+                            VBox eventoRoot = ((EventoHelioCombate) evento).getRoot();
+                            StackPane.setAlignment(eventoRoot, Pos.BOTTOM_CENTER);
+                            root.getChildren().add(((EventoHelioCombate) evento).getRoot());
+                        });
+                        eventsMap[tileY][tileX] = null;
+                        preRenderMap();
+                        blockGame = false;
                     } else {
                         eventsMap[tileY][tileX] = null;
                         preRenderMap();

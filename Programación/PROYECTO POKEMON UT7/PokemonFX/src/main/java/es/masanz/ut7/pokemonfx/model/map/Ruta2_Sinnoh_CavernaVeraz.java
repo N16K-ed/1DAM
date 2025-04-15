@@ -5,6 +5,8 @@ import es.masanz.ut7.pokemonfx.model.base.Evento;
 import es.masanz.ut7.pokemonfx.model.base.Mapa;
 import es.masanz.ut7.pokemonfx.model.enums.CollisionType;
 import es.masanz.ut7.pokemonfx.model.enums.TileType;
+import es.masanz.ut7.pokemonfx.model.event.EventoBotiquin;
+import es.masanz.ut7.pokemonfx.model.event.EventoCuraPP;
 import es.masanz.ut7.pokemonfx.model.fx.NPC;
 import es.masanz.ut7.pokemonfx.model.pokemons.*;
 
@@ -51,7 +53,7 @@ public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
                 {10, 6, 7,12,40,34,34,34,34,34,41,45,45,45,45,45,44,33,33,33,33,33,33,33,37,11, 7, 6, 9},
                 { 6, 7,12,10, 6, 6, 6, 6, 6, 6,40,41,42,34,34,34,34,34,34,34,34,34,34,34,39, 9,11, 7, 6},
                 { 0, 0,10, 6, 7,12, 6, 6, 6, 6, 6,36,35, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,11, 7, 6, 9, 0, 0},
-                { 0, 0, 6, 7,12,10, 6, 6, 6, 6, 6,36,35, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 9,11, 7, 6, 0, 0},
+                { 0, 0, 6, 7,12,10,47, 6, 6, 6, 6,36,35, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 9,11, 7, 6, 0, 0},
                 { 0, 0, 0, 0,10, 6, 7,12, 6, 6, 6,36,35, 6, 6, 6, 6, 6, 6, 6, 6,11, 7, 6, 9, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 6, 7,12,10, 6, 6, 6,36,35, 6, 6, 6, 6, 6, 6, 6, 6, 9,11, 7, 6, 0, 0, 0, 0},
                 { 0, 0, 0, 0, 0, 0,10, 6, 7,12, 6,40,39, 6, 6, 6, 6, 6, 6,11, 7, 6, 9, 0, 0, 0, 0, 0, 0},
@@ -287,6 +289,11 @@ public class Ruta2_Sinnoh_CavernaVeraz extends Mapa {
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();
                         teleportMap[y][x] = "Mundo Distorsión";
                         break;
+                    case 47:
+                        mapData[y][x] = TileType.MONTE_CENTRO.ordinal();
+                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        eventsMap[y][x] = new EventoCuraPP();
+                    break;
                     default:
                         mapData[y][x] = TileType.CAMINO_BLANCO.ordinal();
                         collisionMap[y][x] = CollisionType.SUELO.ordinal();

@@ -85,7 +85,7 @@ public class Ataque {
         double variacion = 0.85 + (Math.random() * 0.15);
         danioBase *= variacion;
 
-        return (int) Math.max(1, danioBase);
+        return (int) danioBase;
     }
 
     protected boolean esGolpeCritico(Pokemon ejecutor) {
@@ -154,5 +154,9 @@ public class Ataque {
 
     public int getCantidad() {
         return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 }

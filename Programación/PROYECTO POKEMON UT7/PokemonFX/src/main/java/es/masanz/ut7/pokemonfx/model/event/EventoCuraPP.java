@@ -2,6 +2,7 @@ package es.masanz.ut7.pokemonfx.model.event;
 
 import es.masanz.ut7.pokemonfx.app.GameApp;
 import es.masanz.ut7.pokemonfx.controller.MapController;
+import es.masanz.ut7.pokemonfx.model.base.Ataque;
 import es.masanz.ut7.pokemonfx.model.base.Evento;
 import es.masanz.ut7.pokemonfx.model.base.Pokemon;
 import javafx.application.Platform;
@@ -17,7 +18,7 @@ import javafx.scene.text.FontWeight;
 import static es.masanz.ut7.pokemonfx.util.Configuration.VIEW_HEIGHT;
 import static es.masanz.ut7.pokemonfx.util.Configuration.VIEW_WIDTH;
 
-public class EventoBotiquin implements Evento {
+public class EventoCuraPP implements Evento {
     private String imagenEvento = "/pruebas/pokeball_transparente.png";
     private VBox root = new VBox();
     private Label label;
@@ -53,12 +54,17 @@ public class EventoBotiquin implements Evento {
         // Dependiendo del estado (paso), actualizar el texto
         switch (step) {
             case 1:
-                label.setText("Todos los Pokémon de tu equípo de combate han recuperado sus PS.");
+                label.setText("Aunque parece que solo contiene medicamentos que restauran PP...");
+                break;
+            case 2:
+                label.setText("Todos los Pokémon de tu equípo de combate han recuperado sus PP.");
                 break;
             default:
                 for (int i =0; i < GameApp.jugador.getPokemonesCombate().length; i++){
                     if (GameApp.jugador.getPokemonesCombate()[i] != null){
-                        GameApp.jugador.getPokemonesCombate()[i].setHpActual(GameApp.jugador.getPokemonesCombate()[i].getMaxHP());
+                        for(Ataque ataque : GameApp.jugador.getPokemonesCombate()[i].getAtaques().values()){ //recorrer los ataques
+                            ataque.setCantidad(ataque.getPp());
+                        }
                     }
                 }
                 // Eliminar el texto y cerrar la caja de texto

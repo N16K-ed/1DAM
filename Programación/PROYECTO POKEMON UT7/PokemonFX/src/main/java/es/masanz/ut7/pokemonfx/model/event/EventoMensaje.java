@@ -50,7 +50,7 @@ public class EventoMensaje implements Evento {
                         case 1:
                                 label.setText("Nunca te acostarás sin aprender algo nuevo...");
                                 break;
-                        case 2:
+                        default:
                                 // Eliminar el texto y cerrar la caja de texto
                                 Platform.runLater(() -> {
                                         imagenEvento ="";
@@ -58,8 +58,7 @@ public class EventoMensaje implements Evento {
                                         MapController.setBlockGame(false);
                                 });
                                 break;
-                        default:
-                                break;
+
                 }
         }
 

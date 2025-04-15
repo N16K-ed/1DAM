@@ -1,9 +1,8 @@
 package es.masanz.ut7.pokemonfx.model.event;
 
-import es.masanz.ut7.pokemonfx.app.GameApp;
 import es.masanz.ut7.pokemonfx.controller.MapController;
 import es.masanz.ut7.pokemonfx.model.base.Evento;
-import es.masanz.ut7.pokemonfx.model.base.Pokemon;
+import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -13,20 +12,21 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.util.Duration;
 
 import static es.masanz.ut7.pokemonfx.util.Configuration.VIEW_HEIGHT;
 import static es.masanz.ut7.pokemonfx.util.Configuration.VIEW_WIDTH;
 
-public class EventoBotiquin implements Evento {
-    private String imagenEvento = "/pruebas/pokeball_transparente.png";
+public class EventoHelioCombate implements Evento {
+
+    private String imagenEvento = "/pruebas/tierra_distorsion.png";
     private VBox root = new VBox();
     private Label label;
-    private int step = 0; // Para controlar los diferentes estados del mensaje
-
+    // Para controlar los diferentes estados del mensaje
     @Override
     public void aplicarEfecto() {
         // Crear el Label para mostrar el primer mensaje
-        label = new Label("¡Has encontrado un botiquín!");
+        label = new Label("Helio: ¡TE LO ADVERTÍ!");
         label.setFont(Font.font("Arial", FontWeight.BOLD, 12));
         label.setTextFill(Color.BLACK);
 
@@ -43,35 +43,25 @@ public class EventoBotiquin implements Evento {
         // Agregar el Label al root (VBox)
         root.getChildren().add(label);
 
-        root.setOnMouseClicked(event -> {
-            step++;
-            updateText();
+        PauseTransition pause = new PauseTransition(Duration.seconds(1));
+        pause.setOnFinished(event -> {
+           updateText();
         });
+        pause.play();
+
+
     }
 
     private void updateText() {
-        // Dependiendo del estado (paso), actualizar el texto
-        switch (step) {
-            case 1:
-                label.setText("Todos los Pokémon de tu equípo de combate han recuperado sus PS.");
-                break;
-            default:
-                for (int i =0; i < GameApp.jugador.getPokemonesCombate().length; i++){
-                    if (GameApp.jugador.getPokemonesCombate()[i] != null){
-                        GameApp.jugador.getPokemonesCombate()[i].setHpActual(GameApp.jugador.getPokemonesCombate()[i].getMaxHP());
-                    }
-                }
-                // Eliminar el texto y cerrar la caja de texto
-                Platform.runLater(() -> {
-                    imagenEvento ="";
-                    ((Pane) root.getParent()).getChildren().remove(root);
-                    MapController.setBlockGame(false);
-                });
-                break;
-        }
+    // Eliminar el texto y cerrar la caja de texto
+        Platform.runLater(() -> {
+             imagenEvento ="";
+            ((Pane) root.getParent()).getChildren().remove(root);
+             MapController.setBlockGame(false);
+        });
     }
 
-    @Override
+        @Override
     public String imagenDelEvento() {
         return imagenEvento;
     }
@@ -79,5 +69,4 @@ public class EventoBotiquin implements Evento {
     public VBox getRoot() {
         return root;
     }
-
 }

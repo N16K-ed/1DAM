@@ -194,9 +194,7 @@ public class CombateController {
                 selectedPokemon.setAtaqueSeleccionado(ataque);
                 ejecutarRondaAtaque(battleText, buttonLayout);
             });
-            if(ataque.getCantidad()<=0){
-                buttonLayout.setDisable(true);
-            }
+
             statsGrid.add(btnAtaque, (auxContador%2), (auxContador/2));
 
             auxContador++;
