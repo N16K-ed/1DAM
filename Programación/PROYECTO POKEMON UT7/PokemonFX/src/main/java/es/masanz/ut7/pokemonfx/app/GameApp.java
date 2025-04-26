@@ -28,15 +28,23 @@ public class GameApp extends Application {
         jugador.incluirPokemonParaCombatir(1,new Charizard(40));
         jugador.incluirPokemonParaCombatir(2,new Blastoise(40));
         jugador.incluirPokemonParaCombatir(3,new Magikarp(40));
-        /*
         // Pokemon en el PC
-            jugador.getPokemonesCapturados().add(new Bulbasaur(16));
-            jugador.getPokemonesCapturados().add(new Charmander(16));
-            jugador.getPokemonesCapturados().add(new Squirtle(16));
-            jugador.getPokemonesCapturados().add(new Ivysaur(36));
-            jugador.getPokemonesCapturados().add(new Charmeleon(36));
-            jugador.getPokemonesCapturados().add(new Wartortle(36));
-        */
+            jugador.getPokemonesCapturados().add(new Bulbasaur(15));
+            jugador.getPokemonesCapturados().add(new Charmander(15));
+            jugador.getPokemonesCapturados().add(new Squirtle(15));
+            jugador.getPokemonesCapturados().add(new Ivysaur(31));
+            jugador.getPokemonesCapturados().add(new Charmeleon(35));
+            jugador.getPokemonesCapturados().add(new Wartortle(35));
+            jugador.getPokemonesCapturados().add(new Bronzor(32));
+            jugador.getPokemonesCapturados().add(new Bronzong(33));
+            jugador.getPokemonesCapturados().add(new Magikarp(19));
+            jugador.getPokemonesCapturados().add(new Gyarados(20));
+            jugador.getPokemonesCapturados().add(new Golbat(30));
+            jugador.getPokemonesCapturados().add(new Crobat(40));
+            jugador.getPokemonesCapturados().add(new Bidoof(14));
+            jugador.getPokemonesCapturados().add(new Bibarel(15));
+            jugador.getPokemonesCapturados().add(new Giratina(1));
+            jugador.getPokemonesCapturados().add(new Giratina(100));
         launch(args);
     }
 }

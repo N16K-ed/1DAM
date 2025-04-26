@@ -65,13 +65,13 @@ public class Ruta2_Sinnoh_LagoVeraz extends Mapa {
                 {16,17,16,17,16,17,16,17,16,17,16,17,21,15,15,15,15,15,15,15,15,15,15,15,15,20,13, 8, 8,28, 8, 8, 8,14,21,15,15,15,15,15,15,15,15,15,15,15,15,20,16,17,16,17,16,17,16,17,16,17,16,17},
                 {18,19,18,19,18,19,18,19,18,19,18,19,21,15,15,15,15,15,15,15,15,15,15,15,15,20, 6, 6, 6, 6, 6, 6, 6, 6,21,15,15,15,15,15,15,15,15,15,15,15,15,20,18,19,18,19,18,19,18,19,18,19,18,19},
                 {16,17,16,17,16,17,16,17,16,17,16,17,21,15,15,15,15,15,15,15,15,15,15,15,15,32,24, 6, 6, 6, 6, 6, 6,25,31,15,15,15,15,15,15,15,15,15,15,15,15,20, 2, 4, 4, 4,16,17,16,17,16,17,16,17},
-                {18,19,18,19,18,19,18,19,18,19,18,19,27,22,29,15,15,15,15,15,15,15,15,15,15,15,32,23,23,23,23,23,23,31,15,15,15,15,15,15,15,15,15,15,15,15,15,20, 3, 2, 2, 4,18,19,18,19,18,19,18,19},
-                {16,17,16,17,16,17,16,17,16,17,16,17,16,17,21,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,30,22,26, 3, 3, 2, 2,16,17,16,17,16,17,16,17},
-                {18,19,18,19,18,19,18,19,18,19,18,19,18,19,27,22,29,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,20, 3, 3, 3, 3, 2, 2,18,19,18,19,18,19,18,19},
-                {16,17,16,17,16,17,16,17,16,17, 4, 2, 2, 4,16,17,21,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,30,22,26, 2, 3, 3, 3, 2, 2,16,17,16,17,16,17,16,17},
-                {18,19,18,19,18,19,18,19,18,19, 2, 2, 2, 2,18,19,27,22,29,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,20, 2, 3, 3, 3, 3, 3, 2, 2,18,19,18,19,18,19,18,19},
-                {16,17,16,17,16,17,16,17, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2,21,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,30,22,26, 2, 3, 3, 3, 3, 2,16,17,16,17,16,17,16,17,16,17},
-                {18,19,18,19,18,19,18,19, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2,27,22,29,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,20, 2, 2, 2, 3, 3, 3, 2, 2,18,19,18,19,18,19,18,19,18,19},
+                {18,19,18,19,18,19,18,19,18,19,18,19,27,22,29,15,15,15,15,15,15,15,15,15,15,15,32,23,24, 2,25,23,23,31,15,15,15,15,15,15,15,15,15,15,15,15,15,20, 3, 2, 2, 4,18,19,18,19,18,19,18,19},
+                {16,17,16,17,16,17,16,17,16,17,16,17,16,17,21,15,15,15,15,15,15,15,15,15,15,15,15,15,20, 2,21,15,15,15,15,15,15,15,15,15,15,15,15,15,15,30,22,26, 3, 3, 2, 2,16,17,16,17,16,17,16,17},
+                {18,19,18,19,18,19,18,19,18,19,18,19,18,19,27,22,29,15,15,15,15,15,15,15,15,30,22,22,26, 2,27,22,22,22,22,22,22,22,22,22,22,22,22,22,22,26, 3, 3, 3, 3, 2, 2,18,19,18,19,18,19,18,19},
+                {16,17,16,17,16,17,16,17,16,17, 4, 2, 2, 4,16,17,21,15,15,15,15,15,15,15,15,20, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 2, 2,16,17,16,17,16,17,16,17},
+                {18,19,18,19,18,19,18,19,18,19, 2, 2, 2, 2,18,19,27,22,22,22,22,22,22,22,22,26, 2,25,23,23,23,23,23,23,23,23,23,23,23,23,23,23,24, 2, 2, 3, 3, 3, 3, 3, 2, 2,18,19,18,19,18,19,18,19},
+                {16,17,16,17,16,17,16,17, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,21,15,15,15,15,15,15,15,15,15,15,15,15,15,30,26, 2, 2, 3, 3, 3, 3, 2,16,17,16,17,16,17,16,17,16,17},
+                {18,19,18,19,18,19,18,19, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2,25,23,23,23,23,23,23,31,15,15,15,15,15,15,15,15,15,15,15,15,15,20, 2, 2, 2, 3, 3, 3, 2, 2,18,19,18,19,18,19,18,19,18,19},
                 {16,17,16,17,16,17,16,17, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2,16,17,21,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,30,22,26, 2, 2, 2, 2, 2, 2, 2, 2,16,17,16,17,16,17,16,17,16,17},
                 {18,19,18,19,18,19,18,19, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2,18,19,27,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,26, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,18,19,18,19,18,19,18,19,18,19},
                 {16,17,16,17,16,17,16,17, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2,16,17,16,17,16,17,16,17,16,17,16,17,16,17,16,17,16,17,16,17,16,17, 2, 2, 2, 2, 2, 2,16,17,16,17,16,17,16,17,16,17,16,17},
@@ -192,35 +192,35 @@ public class Ruta2_Sinnoh_LagoVeraz extends Mapa {
                         break;
                     case 20: //BORDE DEL AGUA DER
                         mapData[y][x] = TileType.AGUA_BORDE_DER.ordinal();
-                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
                     case 21: //BORDE DEL AGUA IZD
                         mapData[y][x] = TileType.AGUA_BORDE_IZD.ordinal();
-                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
                     case 22: //BORDE DEL AGUA ABAJO
                         mapData[y][x] = TileType.AGUA_BORDE_ABAJO.ordinal();
-                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
                     case 23: //BORDE DEL AGUA ARRIBA
                         mapData[y][x] = TileType.AGUA_BORDE_ARRIBA.ordinal();
-                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
                     case 24: //ESQUINA DEL BORDE DEL AGUA ARRIBA-DER
                         mapData[y][x] = TileType.AGUA_ESQUINA_ARRIBA_DER.ordinal();
-                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
                     case 25: //ESQUINA DEL BORDE DEL AGUA ARRIBA-IZD
                         mapData[y][x] = TileType.AGUA_ESQUINA_ARRIBA_IZD.ordinal();
-                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
                     case 26: //ESQUINA DEL BORDE DEL AGUA ABAJO-DER
                         mapData[y][x] = TileType.AGUA_ESQUINA_ABAJO_DER.ordinal();
-                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
                     case 27: //ESQUINA DEL BORDE DEL AGUA ABAJO-IZD
                         mapData[y][x] = TileType.AGUA_ESQUINA_ABAJO_IZD.ordinal();
-                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
                     case 28: //PUERTA DE CUEVA
                         mapData[y][x] = TileType.PUERTA_CUEVA.ordinal();
@@ -229,19 +229,19 @@ public class Ruta2_Sinnoh_LagoVeraz extends Mapa {
                         break;
                     case 29: //GIRO AGUA ARRIBA-DER
                         mapData[y][x] = TileType.GIRO_BORDE_AGUA_ARRIBA_DER.ordinal();
-                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
                     case 30: //GIRO AGUA ARRIBA-IZD
                         mapData[y][x] = TileType.GIRO_BORDE_AGUA_ARRIBA_IZD.ordinal();
-                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
                     case 31: //GIRO AGUA ABAJO-DER
                         mapData[y][x] = TileType.GIRO_BORDE_AGUA_ABAJO_DER.ordinal();
-                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
                     case 32: //GIRO AGUA ABAJO-IZD
                         mapData[y][x] = TileType.GIRO_BORDE_AGUA_ABAJO_IZD.ordinal();
-                        collisionMap[y][x] = CollisionType.SUELO.ordinal();
+                        collisionMap[y][x] = CollisionType.PARED.ordinal();
                         break;
                     case 33: //CARTEL
                         mapData[y][x] = TileType.CESPED.ordinal();
