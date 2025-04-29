@@ -24,10 +24,19 @@ public class GameApp extends Application {
         //Dar iniciales.
 
 
+<<<<<<< Updated upstream
         jugador.incluirPokemonParaCombatir(0,new Venusaur(40));        ;
         jugador.incluirPokemonParaCombatir(1,new Charizard(40));
         jugador.incluirPokemonParaCombatir(2,new Blastoise(40));
         jugador.incluirPokemonParaCombatir(3,new Magikarp(40));
+=======
+        jugador.incluirPokemonParaCombatir(0,new Venusaur(100));        ;
+        jugador.incluirPokemonParaCombatir(1,new Charizard(100));
+        jugador.incluirPokemonParaCombatir(2,new Blastoise(100));
+        jugador.incluirPokemonParaCombatir(3,new Magikarp(100));
+        jugador.incluirPokemonParaCombatir(4, new Giratina(100));
+        /*
+>>>>>>> Stashed changes
         // Pokemon en el PC
             jugador.getPokemonesCapturados().add(new Bulbasaur(15));
             jugador.getPokemonesCapturados().add(new Charmander(15));
